@@ -121,12 +121,17 @@
 
 <script>
   $(document).ready(function() {
-    $('#registros').DataTable({
-      "language": {
-        "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"
-      },
-      "order": [[0, "asc"]]
-    });
+    // Verificar se a tabela já foi inicializada
+    if (!$.fn.DataTable.isDataTable('#registros')) {
+      $('#registros').DataTable({
+        "language": {
+          "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"
+        },
+        "order": [[0, "asc"]],
+        "pageLength": 25,
+        "responsive": true
+      });
+    }
   });
 </script>
 
