@@ -213,6 +213,12 @@ $routes->add('/Admin/HistoricoEscolar/Periodo/edit/(:num)', 'Admin\HistoricoEsco
 $routes->post('/Admin/HistoricoEscolar/Periodo/update/(:num)', 'Admin\HistoricoEscolarPeriodo::update/$1');
 $routes->add('/Admin/HistoricoEscolar/Periodo/delete/(:num)', 'Admin\HistoricoEscolarPeriodo::delete/$1');
 $routes->add('/Admin/HistoricoEscolar/Periodo/notas/(:num)', 'Admin\HistoricoEscolarPeriodo::notas/$1');
+// Rotas de Notas
+$routes->add('/Admin/HistoricoEscolar/Notas/create/(:num)', 'Admin\HistoricoEscolarNotas::create/$1');
+$routes->post('/Admin/HistoricoEscolar/Notas/store/(:num)', 'Admin\HistoricoEscolarNotas::store/$1');
+$routes->add('/Admin/HistoricoEscolar/Notas/edit/(:num)', 'Admin\HistoricoEscolarNotas::edit/$1');
+$routes->post('/Admin/HistoricoEscolar/Notas/update/(:num)', 'Admin\HistoricoEscolarNotas::update/$1');
+$routes->add('/Admin/HistoricoEscolar/Notas/delete/(:num)', 'Admin\HistoricoEscolarNotas::delete/$1');
 //-------------------------------------------------------------------------
 
 /*
