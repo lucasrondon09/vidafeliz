@@ -198,6 +198,15 @@ $routes->add('/Admin/HistoricoEscolar/Disciplinas/visualizar/(:num)', 'Admin\His
 $routes->add('/Admin/HistoricoEscolar/Disciplinas/editar/(:num)', 'Admin\HistoricoEscolarDisciplinas::update/$1');
 $routes->add('/Admin/HistoricoEscolar/Disciplinas/excluir/(:num)', 'Admin\HistoricoEscolarDisciplinas::delete/$1');
 //-------------------------------------------------------------------------
+// Rotas do Histórico Escolar
+$routes->add('/Admin/HistoricoEscolar', 'Admin\HistoricoEscolar::index');
+$routes->add('/Admin/HistoricoEscolar/create', 'Admin\HistoricoEscolar::create');
+$routes->post('/Admin/HistoricoEscolar/store', 'Admin\HistoricoEscolar::store');
+$routes->add('/Admin/HistoricoEscolar/view/(:num)', 'Admin\HistoricoEscolar::view/$1');
+$routes->add('/Admin/HistoricoEscolar/edit/(:num)', 'Admin\HistoricoEscolar::edit/$1');
+$routes->post('/Admin/HistoricoEscolar/update/(:num)', 'Admin\HistoricoEscolar::update/$1');
+$routes->add('/Admin/HistoricoEscolar/delete/(:num)', 'Admin\HistoricoEscolar::delete/$1');
+//-------------------------------------------------------------------------
 
 /*
  * --------------------------------------------------------------------
