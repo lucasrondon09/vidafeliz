@@ -206,6 +206,13 @@ $routes->add('/Admin/HistoricoEscolar/view/(:num)', 'Admin\HistoricoEscolar::vie
 $routes->add('/Admin/HistoricoEscolar/edit/(:num)', 'Admin\HistoricoEscolar::edit/$1');
 $routes->post('/Admin/HistoricoEscolar/update/(:num)', 'Admin\HistoricoEscolar::update/$1');
 $routes->add('/Admin/HistoricoEscolar/delete/(:num)', 'Admin\HistoricoEscolar::delete/$1');
+// Rotas de Períodos Letivos
+$routes->add('/Admin/HistoricoEscolar/Periodo/create/(:num)', 'Admin\HistoricoEscolarPeriodo::create/$1');
+$routes->post('/Admin/HistoricoEscolar/Periodo/store/(:num)', 'Admin\HistoricoEscolarPeriodo::store/$1');
+$routes->add('/Admin/HistoricoEscolar/Periodo/edit/(:num)', 'Admin\HistoricoEscolarPeriodo::edit/$1');
+$routes->post('/Admin/HistoricoEscolar/Periodo/update/(:num)', 'Admin\HistoricoEscolarPeriodo::update/$1');
+$routes->add('/Admin/HistoricoEscolar/Periodo/delete/(:num)', 'Admin\HistoricoEscolarPeriodo::delete/$1');
+$routes->add('/Admin/HistoricoEscolar/Periodo/notas/(:num)', 'Admin\HistoricoEscolarPeriodo::notas/$1');
 //-------------------------------------------------------------------------
 
 /*
