@@ -1,0 +1,93 @@
+ERROR - 2025-05-16 09:27:41 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(82): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2025-05-16 09:30:46 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tu...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tu...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tu...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tu...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(88): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-05-16 09:33:26 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tu...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tu...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tu...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tu...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(87): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-05-16 09:33:26 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `turma_professor` (`id_turma`, `id_professor`, `created_at`, `updated_at`) VALUES (\'1\', (\'159\',\'160\'), \'2025-05-16 09:33:26\', \'2025-05-16 09:33:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `turma_professor` (`id_turma`, `id_professor`, `created_at`, `updated_at`) VALUES (\'1\', (\'159\',\'160\'), \'2025-05-16 09:33:26\', \'2025-05-16 09:33:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `turma_professor` (`id_turma`, `id_professor`, `created_at`, `updated_at`) VALUES (\'1\', (\'159\',\'160\'), \'2025-05-16 09:33:26\', \'2025-05-16 09:33:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `turma_professor` (`id_turma`, `id_professor`, `created_at`, `updated_at`) VALUES (:id_turma:, :id_professor:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Turmas.php(87): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-16 09:34:16 --> Array to string conversion
+in APPPATH\Controllers\Admin\Turmas.php on line 79.
+ 1 APPPATH\Controllers\Admin\Turmas.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Turmas.php', 79, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-16 09:34:34 --> Array to string conversion
+in APPPATH\Controllers\Admin\Turmas.php on line 81.
+ 1 APPPATH\Controllers\Admin\Turmas.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Turmas.php', 81, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-16 09:35:07 --> Array to string conversion
+in APPPATH\Controllers\Admin\Turmas.php on line 81.
+ 1 APPPATH\Controllers\Admin\Turmas.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Turmas.php', 81, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-16 09:35:15 --> Array to string conversion
+in APPPATH\Controllers\Admin\Turmas.php on line 81.
+ 1 APPPATH\Controllers\Admin\Turmas.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Turmas.php', 81, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-16 09:39:26 --> Array to string conversion
+in APPPATH\Controllers\Admin\Turmas.php on line 83.
+ 1 APPPATH\Controllers\Admin\Turmas.php(83): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Turmas.php', 83, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->incluirProfessor()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

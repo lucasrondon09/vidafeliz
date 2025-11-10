@@ -1,0 +1,16 @@
+CRITICAL - 2025-08-18 21:41:14 --> ini_set(): session.sid_length INI setting is deprecated
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 321.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'ini_set(): session.sid_length INI setting is deprecated', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 321)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(321): ini_set('session.sid_length', '40')
+ 3 SYSTEMPATH\Session\Handlers\FileHandler.php(85): CodeIgniter\Session\Handlers\FileHandler->configureSessionIDRegex()
+ 4 SYSTEMPATH\Config\Services.php(658): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 5 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 6 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 7 SYSTEMPATH\Config\Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 8 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session()
+ 9 SYSTEMPATH\Common.php(932): CodeIgniter\Config\BaseService::__callStatic('session', [])
+10 APPPATH\Controllers\Admin\Auth.php(16): session()
+11 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Auth->__construct()
+12 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

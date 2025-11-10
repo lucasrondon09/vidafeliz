@@ -1,0 +1,44 @@
+CRITICAL - 2023-01-19 12:45:16 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::like() must be of the type string, null given, called in C:\wamp64\www\admin\system\Model.php on line 809
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 SYSTEMPATH\Model.php(809): CodeIgniter\Database\BaseBuilder->like('nome', null)
+ 2 APPPATH\Controllers\Admin\Usuarios.php(30): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Usuarios->index()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 13:21:32 --> Undefined variable: site
+in APPPATH\Views\admin\template\header.php on line 68.
+ 1 APPPATH\Views\admin\template\header.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: site', 'APPPATH\\Views\\admin\\template\\header.php', 68, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/template/header.php', [], true)
+ 5 APPPATH\Controllers\Admin\Home.php(31): view('admin/template/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 13:21:40 --> Undefined variable: site
+in APPPATH\Views\admin\template\header.php on line 68.
+ 1 APPPATH\Views\admin\template\header.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: site', 'APPPATH\\Views\\admin\\template\\header.php', 68, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/template/header.php', [], true)
+ 5 APPPATH\Controllers\Admin\Usuarios.php(44): view('admin/template/header.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Usuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 14:22:37 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Falha ao analisar a string json, erro: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\wamp64\www\admin\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\wamp64\www\admin\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\wamp64\www\admin\system\API\ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\wamp64\www\admin\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\wamp64\www\admin\system\Debug\Exceptions.php(133): CodeIgniter\Debug\Exceptions->respond(Array, 404)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\PageNotFoundException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

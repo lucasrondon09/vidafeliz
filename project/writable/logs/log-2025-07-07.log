@@ -1,0 +1,850 @@
+ERROR - 2025-07-07 09:03:05 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:03:05 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(45): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:03:50 --> mysqli_sql_exception: Unknown column 'disciplinas.nome' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:03:50 --> Unknown column 'disciplinas.nome' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_nome`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_nome`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_nome`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_nome`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:04:03 --> mysqli_sql_exception: Unknown column 'disciplinas.nome' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:04:03 --> Unknown column 'disciplinas.nome' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`nome` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:04:14 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:04:14 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:04:28 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:04:28 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:04:37 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:04:37 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:05:37 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:05:37 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:05:59 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:05:59 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:06:21 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:06:21 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.`nota`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:07:16 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:07:16 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:08:31 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:08:31 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 09:08:43 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-07 09:08:43 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = \'2\'
+AND `id_turma` = \'1\'
+AND `alunos_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+LEFT JOIN `turma_disciplina` ON `turma_disciplina`.`id` = `alunos_notas`.`id_disciplina`
+LEFT JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+WHERE `id_aluno` = :id_aluno:
+AND `id_turma` = :id_turma:
+AND `alunos_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(132): App\Models\Admin\AlunosNotasModel->getNotas('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 10:30:03 --> Call to undefined method App\Models\Admin\DisciplinasModel::getDisciplinaByTurma
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(134): CodeIgniter\Model->__call('getDisciplinaByTurma', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 10:33:15 --> Undefined variable $disciplinas
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 138.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $disciplinas', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(143): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-07 19:24:49 --> mysqli_sql_exception: Unknown column 'disciplinas.descricao' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\secretaria-digital\project\app\Views\admin\relatorios\ficha-individual.php(146): App\Models\Admin\AlunosNotasModel->getNotas('1', '2', '7', 1)
+#8 C:\wamp64\www\secretaria-digital\project\system\View\View.php(213): include('C:\\wamp64\\www\\s...')
+#9 C:\wamp64\www\secretaria-digital\project\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#10 C:\wamp64\www\secretaria-digital\project\system\Common.php(1135): CodeIgniter\View\View->render('admin/relatorio...', Array, true)
+#11 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(146): view('admin/relatorio...', Array)
+#12 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#13 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#14 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#16 {main}
+CRITICAL - 2025-07-07 19:24:49 --> Unknown column 'disciplinas.descricao' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+WHERE `alunos_notas`.`id_aluno` = \'2\'
+AND `alunos_notas`.`id_turma` = \'1\'
+AND `alunos_notas`.`id_disciplina` = \'7\'
+AND `alunos_notas`.`bimestre` = 1
+AND `alunos_notas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+WHERE `alunos_notas`.`id_aluno` = \'2\'
+AND `alunos_notas`.`id_turma` = \'1\'
+AND `alunos_notas`.`id_disciplina` = \'7\'
+AND `alunos_notas`.`bimestre` = 1
+AND `alunos_notas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+WHERE `alunos_notas`.`id_aluno` = \'2\'
+AND `alunos_notas`.`id_turma` = \'1\'
+AND `alunos_notas`.`id_disciplina` = \'7\'
+AND `alunos_notas`.`bimestre` = 1
+AND `alunos_notas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos_notas`.*, `disciplinas`.`descricao` as `disciplina_descricao`, `turma_disciplina`.`id_disciplina`
+FROM `alunos_notas`
+WHERE `alunos_notas`.`id_aluno` = :alunos_notas.id_aluno:
+AND `alunos_notas`.`id_turma` = :alunos_notas.id_turma:
+AND `alunos_notas`.`id_disciplina` = :alunos_notas.id_disciplina:
+AND `alunos_notas`.`bimestre` = :alunos_notas.bimestre:
+AND `alunos_notas`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Admin\AlunosNotasModel.php(46): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Views\admin\relatorios\ficha-individual.php(146): App\Models\Admin\AlunosNotasModel->getNotas('1', '2', '7', 1)
+ 9 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+10 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+11 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+12 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+13 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+14 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+15 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:25:16 --> Attempt to read property "nota" on null
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nota" on null', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:35:57 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:36:11 --> Attempt to read property "nota" on null
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nota" on null', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:36:41 --> Attempt to read property "nota" on null
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nota" on null', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:37:55 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\Admin\AlunosNotasModel.php on line 43.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): App\Models\Admin\AlunosNotasModel->getNotas('1', '2', '7', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:41:29 --> Attempt to read property "nota" on null
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nota" on null', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:43:14 --> Attempt to read property "nota" on array
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 146.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nota" on array', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 19:46:02 --> Undefined array key 0
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 148.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(148): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 148)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 20:44:43 --> Call to undefined method App\Models\Admin\AlunosNotasModel::getFaltas
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(149): CodeIgniter\Model->__call('getFaltas', [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 21:05:22 --> Undefined variable $totalNotas
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 160.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalNotas', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 160)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(146): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 21:47:17 --> Function strftime() is deprecated
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 217.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(217): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function strftime() is deprecated', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 217)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(147): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-07 22:01:05 --> Undefined property: stdClass::$periodo
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 121.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$periodo', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 121)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(147): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

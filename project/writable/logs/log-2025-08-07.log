@@ -1,0 +1,45 @@
+CRITICAL - 2025-08-07 09:30:34 --> Undefined variable $index
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 70.
+ 1 APPPATH\Views\admin\relatorios\avaliacao-individual.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Views\\admin\\relatorios\\avaliacao-individual.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(186): view('admin/relatorios/avaliacao-individual', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(87): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-07 10:05:09 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 57.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(191): view('admin/relatorios/avaliacao-individual', [...])
+ 5 APPPATH\Controllers\Admin\Relatorios.php(89): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-07 10:05:50 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 57.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(191): view('admin/relatorios/avaliacao-individual', [...])
+ 5 APPPATH\Controllers\Admin\Relatorios.php(89): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-07 10:07:27 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 57.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(191): view('admin/relatorios/avaliacao-individual', [...])
+ 5 APPPATH\Controllers\Admin\Relatorios.php(89): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

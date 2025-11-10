@@ -1,0 +1,385 @@
+ERROR - 2025-06-25 21:28:37 --> mysqli_sql_exception: Unknown column 'turma_disciplina_professor.id_professor' in 'where clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-06-25 21:28:37 --> Unknown column 'turma_disciplina_professor.id_professor' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_professor` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_professor` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_professor` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = :turma_disciplina.id_turma:
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_professor` = :turma_disciplina_professor.id_professor:
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-25 21:29:04 --> mysqli_sql_exception: Unknown column 'turma_disciplina_professor.id_turma_disciplina' in 'on clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-06-25 21:29:04 --> Unknown column 'turma_disciplina_professor.id_turma_disciplina' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = :turma_disciplina.id_turma:
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = :turma_disciplina_professor.id_usuario:
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-25 21:29:37 --> mysqli_sql_exception: Unknown column 'turma_disciplina_professor.id_turma_disciplina' in 'on clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-06-25 21:29:37 --> Unknown column 'turma_disciplina_professor.id_turma_disciplina' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina`.`id_disciplina`
+JOIN `turma_disciplina_professor` ON `turma_disciplina_professor`.`id_turma_disciplina` = `turma_disciplina`.`id`
+WHERE `turma_disciplina`.`id_turma` = :turma_disciplina.id_turma:
+AND `turma_disciplina_professor`.`deleted_at` is null
+AND `turma_disciplina_professor`.`id_usuario` = :turma_disciplina_professor.id_usuario:
+AND `turma_disciplina`.`deleted_at` is null
+AND `turma_disciplina`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-25 21:47:55 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\lancar-notas.php on line 84.
+ 1 APPPATH\Views\admin\turmas\lancar-notas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\lancar-notas.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(648): view('admin/turmas/lancar-notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-25 21:48:08 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\lancar-notas.php on line 84.
+ 1 APPPATH\Views\admin\turmas\lancar-notas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\lancar-notas.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(648): view('admin/turmas/lancar-notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-25 21:48:35 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\lancar-notas.php on line 84.
+ 1 APPPATH\Views\admin\turmas\lancar-notas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\lancar-notas.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(648): view('admin/turmas/lancar-notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-25 21:49:14 --> mysqli_sql_exception: Unknown column 'turma_disciplina.id' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#6 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-06-25 21:49:14 --> Unknown column 'turma_disciplina.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = :turma_disciplina_professor.id_turma:
+AND `turma_disciplina_professor`.`id_usuario` = :turma_disciplina_professor.id_usuario:
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', [...], false)
+ 5 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-25 21:49:25 --> mysqli_sql_exception: Unknown column 'turma_disciplina.id' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#6 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-06-25 21:49:25 --> Unknown column 'turma_disciplina.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = :turma_disciplina_professor.id_turma:
+AND `turma_disciplina_professor`.`id_usuario` = :turma_disciplina_professor.id_usuario:
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', [...], false)
+ 5 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-06-25 21:49:27 --> mysqli_sql_exception: Unknown column 'turma_disciplina.id' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `discipl...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `discipl...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `discipl...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `discipl...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+#6 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-06-25 21:49:27 --> Unknown column 'turma_disciplina.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = \'1\'
+AND `turma_disciplina_professor`.`id_usuario` = \'159\'
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `disciplinas`.*, `turma_disciplina_professor`.`id` as `id_turma_disciplina_professor`, `turma_disciplina`.`id` as `id_turma_disciplina`
+FROM `turma_disciplina_professor`
+JOIN `disciplinas` ON `disciplinas`.`id` = `turma_disciplina_professor`.`id_disciplina`
+WHERE `turma_disciplina_professor`.`id_turma` = :turma_disciplina_professor.id_turma:
+AND `turma_disciplina_professor`.`id_usuario` = :turma_disciplina_professor.id_usuario:
+AND `turma_disciplina_professor`.`deleted_at` IS NULL
+AND `disciplinas`.`deleted_at` IS NULL', [...], false)
+ 5 APPPATH\Models\Admin\TurmaDisciplinaModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Turmas.php(643): App\Models\Admin\TurmaDisciplinaModel->getDisciplinaByProfessor('1')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-25 21:50:00 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\lancar-notas.php on line 84.
+ 1 APPPATH\Views\admin\turmas\lancar-notas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\lancar-notas.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(648): view('admin/turmas/lancar-notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-25 21:53:31 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\lancar-notas.php on line 84.
+ 1 APPPATH\Views\admin\turmas\lancar-notas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\lancar-notas.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(649): view('admin/turmas/lancar-notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

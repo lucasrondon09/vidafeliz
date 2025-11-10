@@ -1,0 +1,255 @@
+CRITICAL - 2025-09-03 07:35:25 --> Undefined property: stdClass::$cpf
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 83.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cpf', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 83)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(372): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarRead('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 07:44:51 --> Undefined variable $validation
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 65.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(349): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 08:13:36 --> Undefined property: CodeIgniter\View\View::$validation
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 65.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$validation', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(349): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 08:13:45 --> Undefined variable $validation
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 65.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(349): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 08:14:17 --> Undefined variable $validation
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 65.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(349): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 08:14:19 --> Undefined variable $validation
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 65.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(349): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 09:13:00 --> Class "App\Models\Admin\HistoricoEscolarNotasModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 09:15:35 --> Call to undefined method App\Models\Admin\HistoricoEscolarModel::getDisciplinasNotasByHistoricoId
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\Alunos.php(541): CodeIgniter\Model->__call('getDisciplinasNotasByHistoricoId', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 09:15:47 --> Call to undefined method App\Models\Admin\HistoricoEscolarModel::getDisciplinasNotasByHistoricoId
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\Alunos.php(541): CodeIgniter\Model->__call('getDisciplinasNotasByHistoricoId', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 09:16:03 --> Undefined variable $idAluno
+in APPPATH\Views\admin\alunos\disciplinas_notas.php on line 46.
+ 1 APPPATH\Views\admin\alunos\disciplinas_notas.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAluno', 'APPPATH\\Views\\admin\\alunos\\disciplinas_notas.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\disciplinas_notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/disciplinas_notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(543): view('admin/alunos/disciplinas_notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 09:31:15 --> Undefined property: stdClass::$disciplina
+in APPPATH\Views\admin\alunos\disciplinas_notas.php on line 94.
+ 1 APPPATH\Views\admin\alunos\disciplinas_notas.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disciplina', 'APPPATH\\Views\\admin\\alunos\\disciplinas_notas.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\disciplinas_notas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/disciplinas_notas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(544): view('admin/alunos/disciplinas_notas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-09-03 09:34:38 --> mysqli_sql_exception: Unknown column 'disciplinas.disciplina' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\HistoricoEscolarNotasModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(542): App\Models\Admin\HistoricoEscolarNotasModel->getNotasByHistoricoId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-09-03 09:34:38 --> Unknown column 'disciplinas.disciplina' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = :id_historico:
+AND `historico_escolar_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\HistoricoEscolarNotasModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Alunos.php(542): App\Models\Admin\HistoricoEscolarNotasModel->getNotasByHistoricoId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-09-03 09:35:47 --> mysqli_sql_exception: Unknown column 'disciplinas.disciplina' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `histori...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `histori...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `histori...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `histori...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\HistoricoEscolarNotasModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(542): App\Models\Admin\HistoricoEscolarNotasModel->getNotasByHistoricoId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-09-03 09:35:47 --> Unknown column 'disciplinas.disciplina' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = \'2\'
+AND `historico_escolar_notas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `historico_escolar_notas`.*, `disciplinas`.`disciplina`, `disciplinas`.`ch`
+FROM `historico_escolar_notas`
+JOIN `disciplinas` ON `disciplinas`.`id` = `historico_escolar_notas`.`id_disciplina`
+WHERE `id_historico` = :id_historico:
+AND `historico_escolar_notas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\HistoricoEscolarNotasModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Alunos.php(542): App\Models\Admin\HistoricoEscolarNotasModel->getNotasByHistoricoId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotas('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:19:57 --> Undefined variable $disciplinas
+in APPPATH\Views\admin\alunos\disciplinas_notas_crud.php on line 84.
+ 1 APPPATH\Views\admin\alunos\disciplinas_notas_crud.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $disciplinas', 'APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/disciplinas_notas_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(649): view('admin/alunos/disciplinas_notas_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotasRead('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:20:01 --> Undefined variable $disciplinas
+in APPPATH\Views\admin\alunos\disciplinas_notas_crud.php on line 84.
+ 1 APPPATH\Views\admin\alunos\disciplinas_notas_crud.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $disciplinas', 'APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/disciplinas_notas_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(649): view('admin/alunos/disciplinas_notas_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotasRead('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:21:04 --> Undefined variable $disciplinas
+in APPPATH\Views\admin\alunos\disciplinas_notas_crud.php on line 84.
+ 1 APPPATH\Views\admin\alunos\disciplinas_notas_crud.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $disciplinas', 'APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\disciplinas_notas_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/disciplinas_notas_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(649): view('admin/alunos/disciplinas_notas_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotasRead('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:34:52 --> Call to undefined method App\Controllers\Admin\Alunos::setHistoricoEscolarNotasUpdate()
+in APPPATH\Controllers\Admin\Alunos.php on line 672.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarNotasUpdate('3')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:35:40 --> Unclosed '{' on line 15
+in APPPATH\Controllers\Admin\Alunos.php on line 734.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Alunos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Alunos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Alunos')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Alunos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 19:35:44 --> Unclosed '{' on line 15
+in APPPATH\Controllers\Admin\Alunos.php on line 734.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Alunos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Alunos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Alunos')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Alunos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

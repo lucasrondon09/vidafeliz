@@ -1,0 +1,902 @@
+ERROR - 2025-08-12 09:57:34 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(55): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:57:34 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = :turma_professor:
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(55): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:57:59 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:57:59 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_professor` = :turma_professor:
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:18 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(55): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:18 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_professor` = :turma_professor:
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(55): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:24 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:24 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`id_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`id_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`id_professor` = \'160\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_professor`.`id_professor` = :turma_professor.id_professor:
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(51): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:33 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(54): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:33 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(54): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:33 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(54): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:33 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` is null
+AND `alunos`.`deleted_at` is null
+AND `turmas`.`deleted_at` is null
+AND `turma_professor`.`deleted_at` is null
+AND `turma_aluno`.`deleted_at` IS NULL
+ORDER BY `alunos`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(54): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:43 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:43 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:44 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('1')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:44 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('1')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:45 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('3')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('3')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:45 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'3\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'3\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'3\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('3')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('3')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 09:59:46 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 09:59:46 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 10:00:01 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 10:00:01 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 10:01:07 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 10:01:07 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id_turma`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 10:01:43 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 10:01:43 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-08-12 10:01:44 --> mysqli_sql_exception: Column 'id_turma' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-08-12 10:01:44 --> Column 'id_turma' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+LEFT JOIN `turma_professor` ON `turma_professor`.`id_turma` = `turmas`.`id`
+WHERE `id_turma` = :id_turma:
+AND `turma_aluno`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(49): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\AlunosTurmasModel->getAlunosByTurmaId('2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,139 @@
+CRITICAL - 2025-07-12 19:26:29 --> Undefined variable $id_turma
+in APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php on line 45.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_turma', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(867): view('admin/turmas/avaliacao-individual-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividualAluno('2', '33')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 19:26:52 --> Undefined variable $resposta
+in APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php on line 88.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resposta', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(867): view('admin/turmas/avaliacao-individual-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividualAluno('2', '33')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 19:30:11 --> Undefined array key "resposta"
+in APPPATH\Controllers\Admin\Turmas.php on line 875.
+ 1 APPPATH\Controllers\Admin\Turmas.php(875): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resposta"', 'APPPATH\\Controllers\\Admin\\Turmas.php', 875)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->salvarAvaliacaoIndividual()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 20:08:18 --> Undefined variable $professores
+in APPPATH\Views\admin\turmas\avaliacao-individual.php on line 54.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $professores', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(841): view('admin/turmas/avaliacao-individual.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 20:08:35 --> Undefined variable $professores
+in APPPATH\Views\admin\turmas\avaliacao-individual.php on line 54.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $professores', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(841): view('admin/turmas/avaliacao-individual.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 20:22:24 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\admin\turmas\avaliacao-individual.php on line 115.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(844): view('admin/turmas/avaliacao-individual.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-12 20:24:11 --> mysqli_sql_exception: Unknown column 'turma_professor.id_usuario' in 'on clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `usuario...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(809): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(848): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-07-12 20:24:11 --> Unknown column 'turma_professor.id_usuario' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `usuarios`.`id`, `usuarios`.`nome`
+FROM `turma_professor`
+JOIN `usuarios` ON `usuarios`.`id` = `turma_professor`.`id_usuario`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`deleted_at` is null
+AND `usuarios`.`deleted_at` is null
+ORDER BY `usuarios`.`nome` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`id`, `usuarios`.`nome`
+FROM `turma_professor`
+JOIN `usuarios` ON `usuarios`.`id` = `turma_professor`.`id_usuario`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`deleted_at` is null
+AND `usuarios`.`deleted_at` is null
+ORDER BY `usuarios`.`nome` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`id`, `usuarios`.`nome`
+FROM `turma_professor`
+JOIN `usuarios` ON `usuarios`.`id` = `turma_professor`.`id_usuario`
+WHERE `id_turma` = \'2\'
+AND `turma_professor`.`deleted_at` is null
+AND `usuarios`.`deleted_at` is null
+ORDER BY `usuarios`.`nome` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`id`, `usuarios`.`nome`
+FROM `turma_professor`
+JOIN `usuarios` ON `usuarios`.`id` = `turma_professor`.`id_usuario`
+WHERE `id_turma` = :id_turma:
+AND `turma_professor`.`deleted_at` is null
+AND `usuarios`.`deleted_at` is null
+ORDER BY `usuarios`.`nome` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(809): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Turmas.php(848): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 20:26:08 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$nome
+in APPPATH\Views\admin\turmas\avaliacao-individual.php on line 115.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$nome', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php', 115)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(850): view('admin/turmas/avaliacao-individual.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 22:06:10 --> Call to a member function select() on null
+in APPPATH\Models\Admin\TurmaProfessorModel.php on line 20.
+ 1 APPPATH\Controllers\Admin\Turmas.php(842): App\Models\Admin\TurmaProfessorModel->getProfessor('2')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-12 23:31:32 --> Attempt to read property "resposta" on null
+in APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php on line 124.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "resposta" on null', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(938): view('admin/turmas/avaliacao-individual-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividualAluno('2', '33')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

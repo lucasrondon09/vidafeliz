@@ -1,0 +1,63 @@
+CRITICAL - 2025-08-08 10:02:19 --> syntax error, unexpected token "[", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin\Relatorios.php on line 196.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\Relatorios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\Relatorios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\Relatorios')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\Relatorios', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 10:02:59 --> Cannot use object of type App\Controllers\Admin\Relatorios as array
+in APPPATH\Controllers\Admin\Relatorios.php on line 196.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 10:03:18 --> Cannot use object of type App\Controllers\Admin\Relatorios as array
+in APPPATH\Controllers\Admin\Relatorios.php on line 196.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 10:03:21 --> Cannot use object of type App\Controllers\Admin\Relatorios as array
+in APPPATH\Controllers\Admin\Relatorios.php on line 196.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 10:03:59 --> Arquivo inválido: admin/relatorios/a  valiacao-individual.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/relatorios/a  valiacao-individual.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/a  valiacao-individual', [], true)
+ 3 APPPATH\Controllers\Admin\Relatorios.php(200): view('admin/relatorios/a  valiacao-individual', [...])
+ 4 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('1', '2')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 11:31:31 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 49.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(202): view('admin/relatorios/avaliacao-individual', [...])
+ 5 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('2', '30')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-08 11:31:47 --> Undefined variable $i
+in APPPATH\Views\admin\relatorios\avaliacao-individual.php on line 69.
+ 1 APPPATH\Views\admin\relatorios\avaliacao-individual.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'APPPATH\\Views\\admin\\relatorios\\avaliacao-individual.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/avaliacao-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(202): view('admin/relatorios/avaliacao-individual', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(91): App\Controllers\Admin\Relatorios->avaliacaoIndividual('2', '30')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

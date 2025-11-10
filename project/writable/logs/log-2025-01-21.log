@@ -1,0 +1,363 @@
+CRITICAL - 2025-01-21 12:36:42 --> Undefined constant "suporte@vwmisolucoesweb.com.br"
+in APPPATH\Views\admin\home\index.php on line 132.
+ 1 APPPATH\Views\admin\home\index.php(132): constant('suporte@vwmisolucoesweb.com.br')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Home.php(34): view('admin/home/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-21 13:13:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`)) in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\startcommerce\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#10 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#11 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-01-21 13:13:03 --> Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:13:03\', \'2025-01-21 13:13:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:13:03\', \'2025-01-21 13:13:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:13:03\', \'2025-01-21 13:13:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataNoticia:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-21 13:15:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`)) in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\startcommerce\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#10 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#11 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-01-21 13:15:47 --> Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:15:47\', \'2025-01-21 13:15:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:15:47\', \'2025-01-21 13:15:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:15:47\', \'2025-01-21 13:15:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataNoticia:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-21 13:16:22 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`)) in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\startcommerce\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#10 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#11 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-01-21 13:16:22 --> Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:16:22\', \'2025-01-21 13:16:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:16:22\', \'2025-01-21 13:16:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:16:22\', \'2025-01-21 13:16:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataNoticia:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-01-21 13:17:05 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`)) in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\startcommerce\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#10 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#11 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-01-21 13:17:05 --> Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:17:05\', \'2025-01-21 13:17:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:17:05\', \'2025-01-21 13:17:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Teste 4\', \'\', \'                          \\r\\n                        \', \'1\', \'2025-01-21\', \'Selecione\', \'\', \'2025-01-21 13:17:05\', \'2025-01-21 13:17:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataNoticia:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Noticias.php(117): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Noticias.php(75): App\Controllers\Admin\Noticias->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-21 16:08:46 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:08:50 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:05 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:07 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:07 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:07 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:08 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:22 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:48 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:49 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:49 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:09:59 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:19:34 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:20:25 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:21:30 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:22:25 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:23:18 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:26:04 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-01-21 16:26:55 --> Uncaught ValueError: realpath(): Argument #1 ($path) must not contain any null bytes in C:\wamp64\www\startcommerce\project\system\Common.php:91
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#1 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(502): array_map(Object(Closure), Array)
+#4 C:\wamp64\www\startcommerce\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

@@ -1,0 +1,77 @@
+ERROR - 2025-06-26 09:03:56 --> mysqli_sql_exception: Unknown column 'id_turma' in 'where clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosModel.php(37): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(42): App\Models\Admin\AlunosModel->getByTurma('1')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->declaracaoEscolaridade('1', '1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-06-26 09:03:56 --> Unknown column 'id_turma' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `alunos`
+WHERE `id_turma` = \'1\'
+AND `alunos`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `alunos`
+WHERE `id_turma` = \'1\'
+AND `alunos`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `alunos`
+WHERE `id_turma` = \'1\'
+AND `alunos`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `alunos`
+WHERE `id_turma` = :id_turma:
+AND `alunos`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\Admin\AlunosModel.php(37): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(42): App\Models\Admin\AlunosModel->getByTurma('1')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->declaracaoEscolaridade('1', '1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-26 09:40:41 --> Class 'Mpdf\Mpdf' not found
+in APPPATH\Libraries\pdfGenerator.php on line 13.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(60): App\Libraries\PdfGenerator->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarPdf()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-26 09:44:43 --> Class 'Mpdf\Mpdf' not found
+in APPPATH\Libraries\pdfGenerator.php on line 13.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(60): App\Libraries\PdfGenerator->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarPdf()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-26 18:42:54 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\relatorios\index.php on line 49.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/index.php', [], true)
+ 4 APPPATH\Controllers\Admin\Relatorios.php(38): view('admin/relatorios/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-06-26 19:44:55 --> Function strftime() is deprecated
+in APPPATH\Views\admin\relatorios\declaracao-escolaridade.php on line 88.
+ 1 APPPATH\Views\admin\relatorios\declaracao-escolaridade.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function strftime() is deprecated', 'APPPATH\\Views\\admin\\relatorios\\declaracao-escolaridade.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\declaracao-escolaridade.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/declaracao-escolaridade', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(95): view('admin/relatorios/declaracao-escolaridade', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(74): App\Controllers\Admin\Relatorios->declaracaoEscolaridade('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

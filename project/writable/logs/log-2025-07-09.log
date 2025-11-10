@@ -1,0 +1,69 @@
+CRITICAL - 2025-07-09 10:45:40 --> Attempt to read property "nome" on string
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 114.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nome" on string', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 114)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(155): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-09 10:51:30 --> Undefined variable $disciplinas
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 153.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $disciplinas', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 153)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(157): view('admin/relatorios/ficha-individual', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(85): App\Controllers\Admin\Relatorios->fichaIndividual('1', 'C:\\wamp64\\www\\secretaria-digital\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-09 11:04:11 --> Undefined variable $index
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 106.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 106)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(157): view('admin/relatorios/ficha-individual', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(85): App\Controllers\Admin\Relatorios->fichaIndividual('1', 'C:\\wamp64\\www\\secretaria-digital\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-09 19:32:11 --> Maximum execution time of 120 seconds exceeded
+in C:\wamp64\www\secretaria-digital\vendor\mpdf\mpdf\src\Image\ImageProcessor.php on line 230.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-09 19:41:35 --> syntax error, unexpected token "endif"
+in APPPATH\Views\admin\turmas\index.php on line 126.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/index.php', [], true)
+ 3 APPPATH\Controllers\Admin\Turmas.php(65): view('admin/turmas/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-09 19:59:58 --> Undefined variable $url
+in APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php on line 30.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $url', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(862): view('admin/turmas/avaliacao-individual-aluno.php')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividualAluno('2', '33')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-09 22:59:12 --> Undefined property: stdClass::$pergunta
+in APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php on line 83.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual-aluno.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pergunta', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php', 83)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(867): view('admin/turmas/avaliacao-individual-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividualAluno('2', '33')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

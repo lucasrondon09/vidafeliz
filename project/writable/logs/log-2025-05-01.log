@@ -1,0 +1,100 @@
+CRITICAL - 2025-05-01 15:37:07 --> Arquivo inválido: admin/disciplinas/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/disciplinas/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/disciplinas/index.php', [], true)
+ 3 APPPATH\Controllers\Admin\Disciplinas.php(31): view('admin/disciplinas/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:44:26 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(117): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:45:46 --> Undefined variable: record
+in APPPATH\Controllers\Admin\Disciplinas.php on line 115.
+ 1 APPPATH\Controllers\Admin\Disciplinas.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: record', 'APPPATH\\Controllers\\Admin\\Disciplinas.php', 115, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:46:19 --> Undefined variable: record
+in APPPATH\Controllers\Admin\Disciplinas.php on line 115.
+ 1 APPPATH\Controllers\Admin\Disciplinas.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: record', 'APPPATH\\Controllers\\Admin\\Disciplinas.php', 115, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:47:41 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(111): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:48:00 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(111): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:48:06 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(111): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:48:39 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(111): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->read('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 15:49:15 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\crud.php on line 80.
+ 1 APPPATH\Views\admin\turmas\crud.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\crud.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Disciplinas.php(152): view('admin/turmas/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Disciplinas->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Disciplinas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-01 18:47:41 --> Undefined property: stdClass::$nonme
+in APPPATH\Views\admin\turmas\professores.php on line 131.
+ 1 APPPATH\Views\admin\turmas\professores.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nonme', 'APPPATH\\Views\\admin\\turmas\\professores.php', 131, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\professores.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/professores.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(69): view('admin/turmas/professores.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->professoresTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

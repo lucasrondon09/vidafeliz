@@ -1,0 +1,275 @@
+ERROR - 2025-07-08 08:44:17 --> mysqli_sql_exception: Unknown column 'turma.carga_horaria' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(60): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(133): App\Models\Admin\AlunosTurmasModel->getAlunoById('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-08 08:44:17 --> Unknown column 'turma.carga_horaria' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turma`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `id_aluno` = :id_aluno:
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(60): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(133): App\Models\Admin\AlunosTurmasModel->getAlunoById('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-08 08:46:59 --> mysqli_sql_exception: Unknown column 'turma.dias_letivos' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(624): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\secretaria-digital\project\app\Models\Admin\AlunosTurmasModel.php(60): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Relatorios.php(133): App\Models\Admin\AlunosTurmasModel->getAlunoById('1', '2')
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-08 08:46:59 --> Unknown column 'turma.dias_letivos' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = \'1\'
+AND `id_aluno` = \'2\'
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos`.`id` as `id_aluno`, `pais`.*, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`carga_horaria` as `turma_carga_horaria`, `turma`.`dias_letivos` as `turma_dias_letivos`, `turma_aluno`.`id`, `turma_aluno`.`id_aluno`, `turma_aluno`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`periodo` as `turma_periodo`, `turmas`.`ano_letivo` as `ano_letivo`, `turmas`.`grau` as `grau_turma`
+FROM `turma_aluno`
+JOIN `alunos` ON `alunos`.`id` = `turma_aluno`.`id_aluno`
+LEFT JOIN `pais` ON `pais`.`id` = `alunos`.`id_pai`
+LEFT JOIN `turmas` ON `turmas`.`id` = `turma_aluno`.`id_turma`
+WHERE `id_turma` = :id_turma:
+AND `id_aluno` = :id_aluno:
+AND `turma_aluno`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\Admin\AlunosTurmasModel.php(60): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Admin\Relatorios.php(133): App\Models\Admin\AlunosTurmasModel->getAlunoById('1', '2')
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 08:47:13 --> Undefined property: stdClass::$turma_carga_horaraia
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 207.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(207): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$turma_carga_horaraia', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 207)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(147): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:18:03 --> Class "App\Models\Admin\AlunosInfoComplestaresModel" not found
+in APPPATH\Controllers\Admin\Turmas.php on line 323.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->complementarAluno('1', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:20:11 --> Class "App\Models\Admin\AlunosInfoComplementaresModel" not found
+in APPPATH\Controllers\Admin\Turmas.php on line 324.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->complementarAluno('1', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:20:14 --> Class "App\Models\Admin\AlunosInfoComplementaresModel" not found
+in APPPATH\Controllers\Admin\Turmas.php on line 324.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->complementarAluno('1', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:21:01 --> Undefined array key "idAlunoTurma"
+in APPPATH\Controllers\Admin\Turmas.php on line 330.
+ 1 APPPATH\Controllers\Admin\Turmas.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idAlunoTurma"', 'APPPATH\\Controllers\\Admin\\Turmas.php', 330)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->complementarAluno('1', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:22:56 --> Undefined variable $turma_atual
+in APPPATH\Views\admin\turmas\observacao-aluno.php on line 88.
+ 1 APPPATH\Views\admin\turmas\observacao-aluno.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $turma_atual', 'APPPATH\\Views\\admin\\turmas\\observacao-aluno.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\observacao-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/observacao-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(352): view('admin/turmas/observacao-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:25:45 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::is()
+in APPPATH\Controllers\Admin\Turmas.php on line 329.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-08 10:34:00 --> mysqli_sql_exception: Table 'secretaria_digital.aluno_info_complementares' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(333): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-07-08 10:34:27 --> mysqli_sql_exception: Table 'secretaria_digital.aluno_info_complementares' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(333): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-07-08 10:34:54 --> mysqli_sql_exception: Table 'secretaria_digital.aluno_info_complementares' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(333): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-07-08 10:38:42 --> mysqli_sql_exception: Table 'secretaria_digital.aluno_info_complementares' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(333): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2025-07-08 10:38:56 --> mysqli_sql_exception: Table 'secretaria_digital.aluno_info_complementares' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Turmas.php(331): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '2')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(69): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-07-08 10:38:56 --> Table 'secretaria_digital.aluno_info_complementares' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `aluno_info_complementares` (`id_aluno`, `id_turma`, `observacao`, `situacao`, `created_at`, `updated_at`) VALUES (\'2\', \'1\', \'teste\', \'reprovado\', \'2025-07-08 10:38:56\', \'2025-07-08 10:38:56\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `aluno_info_complementares` (`id_aluno`, `id_turma`, `observacao`, `situacao`, `created_at`, `updated_at`) VALUES (\'2\', \'1\', \'teste\', \'reprovado\', \'2025-07-08 10:38:56\', \'2025-07-08 10:38:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `aluno_info_complementares` (`id_aluno`, `id_turma`, `observacao`, `situacao`, `created_at`, `updated_at`) VALUES (\'2\', \'1\', \'teste\', \'reprovado\', \'2025-07-08 10:38:56\', \'2025-07-08 10:38:56\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `aluno_info_complementares` (`id_aluno`, `id_turma`, `observacao`, `situacao`, `created_at`, `updated_at`) VALUES (:id_aluno:, :id_turma:, :observacao:, :situacao:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Turmas.php(331): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->infoComplementarAluno('1', '2')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-08 10:51:15 --> Undefined property: stdClass::$obsevacao
+in APPPATH\Views\admin\relatorios\ficha-individual.php on line 201.
+ 1 APPPATH\Views\admin\relatorios\ficha-individual.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$obsevacao', 'APPPATH\\Views\\admin\\relatorios\\ficha-individual.php', 201)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\ficha-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/ficha-individual', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(151): view('admin/relatorios/ficha-individual', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->fichaIndividual('1', '29')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

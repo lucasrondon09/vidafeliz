@@ -1,0 +1,45 @@
+CRITICAL - 2023-02-01 15:49:45 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Admin\Banners.php on line 116.
+ 1 APPPATH\Controllers\Admin\Banners.php(78): App\Controllers\Admin\Banners->save()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-01 15:50:16 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Admin\Banners.php on line 116.
+ 1 APPPATH\Controllers\Admin\Banners.php(78): App\Controllers\Admin\Banners->save()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-01 15:52:17 --> Call to a member function hasMoved() on null
+in APPPATH\Controllers\Admin\Banners.php on line 116.
+ 1 APPPATH\Controllers\Admin\Banners.php(78): App\Controllers\Admin\Banners->save()
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-01 15:55:43 --> Too few arguments to function CodeIgniter\HTTP\IncomingRequest::getFile(), 0 passed in C:\wamp64\www\admin\app\Controllers\Admin\Banners.php on line 114 and exactly 1 expected
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 782.
+ 1 APPPATH\Controllers\Admin\Banners.php(114): CodeIgniter\HTTP\IncomingRequest->getFile()
+ 2 APPPATH\Controllers\Admin\Banners.php(78): App\Controllers\Admin\Banners->save()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-01 17:03:05 --> Undefined variable: banner
+in APPPATH\Controllers\Admin\Banners.php on line 147.
+ 1 APPPATH\Controllers\Admin\Banners.php(147): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: banner', 'APPPATH\\Controllers\\Admin\\Banners.php', 147, [...])
+ 2 APPPATH\Controllers\Admin\Banners.php(108): App\Controllers\Admin\Banners->save()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-01 17:06:50 --> Too few arguments to function CodeIgniter\HTTP\IncomingRequest::getFile(), 0 passed in C:\wamp64\www\admin\app\Controllers\Admin\Banners.php on line 146 and exactly 1 expected
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 782.
+ 1 APPPATH\Controllers\Admin\Banners.php(146): CodeIgniter\HTTP\IncomingRequest->getFile()
+ 2 APPPATH\Controllers\Admin\Banners.php(108): App\Controllers\Admin\Banners->save()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->create()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

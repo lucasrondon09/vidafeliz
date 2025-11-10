@@ -1,0 +1,248 @@
+CRITICAL - 2025-04-25 08:51:33 --> Call to undefined method App\Controllers\Admin\Turmas::where()
+in APPPATH\Controllers\Admin\Turmas.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 08:51:47 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT COUNT(*) AS `numrows`
+FROM `turmas`
+WHERE `ano_letivo` = :ano_letivo:
+AND `turmas`.`deleted_at` IS NULL', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT COUNT(*) AS `numrows`
+FROM `turmas`
+WHERE `ano_letivo` = :ano_letivo:
+AND `turmas`.`deleted_at` IS NULL', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `turmas`
+WHERE `ano_letivo` = :ano_letivo:
+AND `turmas`.`deleted_at` IS NULL', [...], false)
+ 6 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 8 APPPATH\Controllers\Admin\Turmas.php(60): CodeIgniter\BaseModel->paginate(10)
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-25 09:06:22 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(91): CodeIgniter\BaseModel->paginate(10)
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-25 09:06:22 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE :alunos.nome: ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE :alunos.matricula: ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE :alunos.cpf: ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE :alunos.ano_letivo: ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Alunos.php(91): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-25 09:06:45 --> mysqli_sql_exception: Unknown column 'alunos.ano_letivo' in 'where clause' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(92): CodeIgniter\BaseModel->paginate(10)
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-25 09:06:45 --> Unknown column 'alunos.ano_letivo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE \'%2025%\' ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE \'%2025%\' ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` is null
+AND   (
+`alunos`.`nome` LIKE :alunos.nome: ESCAPE \'!\'
+OR  `alunos`.`matricula` LIKE :alunos.matricula: ESCAPE \'!\'
+OR  `alunos`.`cpf` LIKE :alunos.cpf: ESCAPE \'!\'
+OR  `alunos`.`ano_letivo` LIKE :alunos.ano_letivo: ESCAPE \'!\'
+ )
+AND `alunos`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Alunos.php(92): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:36:43 --> Undefined variable: pager
+in APPPATH\Views\admin\usuarios\index.php on line 115.
+ 1 APPPATH\Views\admin\usuarios\index.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pager', 'APPPATH\\Views\\admin\\usuarios\\index.php', 115, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\usuarios\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/usuarios/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Usuarios.php(30): view('admin/usuarios/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Usuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:39:01 --> Undefined variable: pager
+in APPPATH\Views\admin\turmas\index.php on line 125.
+ 1 APPPATH\Views\admin\turmas\index.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pager', 'APPPATH\\Views\\admin\\turmas\\index.php', 125, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(44): view('admin/turmas/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:43:18 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\alunos\index.php on line 86.
+ 1 APPPATH\Views\admin\alunos\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\alunos\\index.php', 86, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(65): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:43:26 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\alunos\index.php on line 86.
+ 1 APPPATH\Views\admin\alunos\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\alunos\\index.php', 86, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(65): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('97')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:46:21 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\alunos\index.php on line 86.
+ 1 APPPATH\Views\admin\alunos\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\alunos\\index.php', 86, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(65): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:47:40 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\alunos\index.php on line 86.
+ 1 APPPATH\Views\admin\alunos\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\alunos\\index.php', 86, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(65): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-25 09:47:52 --> Invalid argument supplied for foreach()
+in APPPATH\Views\admin\alunos\index.php on line 86.
+ 1 APPPATH\Views\admin\alunos\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\admin\\alunos\\index.php', 86, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(65): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

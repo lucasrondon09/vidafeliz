@@ -1,0 +1,177 @@
+CRITICAL - 2025-09-02 19:45:25 --> Undefined variable $table
+in APPPATH\Views\admin\alunos\historico_escolar.php on line 87.
+ 1 APPPATH\Views\admin\alunos\historico_escolar.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'APPPATH\\Views\\admin\\alunos\\historico_escolar.php', 87)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(326): view('admin/alunos/historico_escolar.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 19:47:55 --> Undefined variable $table
+in APPPATH\Views\admin\alunos\historico_escolar.php on line 91.
+ 1 APPPATH\Views\admin\alunos\historico_escolar.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'APPPATH\\Views\\admin\\alunos\\historico_escolar.php', 91)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(327): view('admin/alunos/historico_escolar.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 19:50:01 --> Undefined variable $table
+in APPPATH\Views\admin\alunos\historico_escolar.php on line 94.
+ 1 APPPATH\Views\admin\alunos\historico_escolar.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'APPPATH\\Views\\admin\\alunos\\historico_escolar.php', 94)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(327): view('admin/alunos/historico_escolar.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 19:52:52 --> Undefined variable $table
+in APPPATH\Views\admin\alunos\historico_escolar.php on line 92.
+ 1 APPPATH\Views\admin\alunos\historico_escolar.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'APPPATH\\Views\\admin\\alunos\\historico_escolar.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(327): view('admin/alunos/historico_escolar.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:16:41 --> Undefined variable $action
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 76.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(336): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:17:12 --> Undefined variable $action
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 76.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(337): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:17:14 --> Undefined variable $action
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 76.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(337): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:17:25 --> Undefined variable $action
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 76.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $action', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(337): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:17:39 --> Undefined variable $idAluno
+in APPPATH\Controllers\Admin\Alunos.php on line 337.
+ 1 APPPATH\Controllers\Admin\Alunos.php(337): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAluno', 'APPPATH\\Controllers\\Admin\\Alunos.php', 337)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:17:56 --> Undefined variable $type
+in APPPATH\Views\admin\alunos\historico_escolar_crud.php on line 77.
+ 1 APPPATH\Views\admin\alunos\historico_escolar_crud.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $type', 'APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar_crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar_crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(339): view('admin/alunos/historico_escolar_crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarCreate('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:52:21 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 372.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarSetCreate('1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:53:00 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 372.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarSetCreate('1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:53:16 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 372.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolarSetCreate('1')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:30 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:38 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:43 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:44 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:54 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:55:57 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 20:56:07 --> Class "App\Models\Admin\HistoricoEscolarModel" not found
+in APPPATH\Controllers\Admin\Alunos.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Alunos->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-02 21:06:36 --> Undefined property: stdClass::$municipio
+in APPPATH\Views\admin\alunos\historico_escolar.php on line 98.
+ 1 APPPATH\Views\admin\alunos\historico_escolar.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$municipio', 'APPPATH\\Views\\admin\\alunos\\historico_escolar.php', 98)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\historico_escolar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/historico_escolar.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(334): view('admin/alunos/historico_escolar.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->historicoEscolar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

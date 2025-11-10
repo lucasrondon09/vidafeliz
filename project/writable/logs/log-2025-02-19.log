@@ -1,0 +1,101 @@
+CRITICAL - 2025-02-19 14:40:20 --> Arquivo inválido: admin/produtos-categorias/create.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/produtos-categorias/create.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/produtos-categorias/create.php', [], true)
+ 3 APPPATH\Controllers\Admin\ProdutosCategorias.php(99): view('admin/produtos-categorias/create.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\ProdutosCategorias->create()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ProdutosCategorias))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-19 14:44:50 --> Attempt to read property "id" on null
+in APPPATH\Views\admin\categorias\edit.php on line 80.
+ 1 APPPATH\Views\admin\categorias\edit.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Views\\admin\\categorias\\edit.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\categorias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/categorias/edit.php', [], true)
+ 5 APPPATH\Controllers\Admin\Categorias.php(168): view('admin/categorias/edit.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Categorias->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Categorias))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-19 14:55:43 --> Undefined property: stdClass::$dataNoticia
+in APPPATH\Views\admin\noticias\edit.php on line 164.
+ 1 APPPATH\Views\admin\noticias\edit.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dataNoticia', 'APPPATH\\Views\\admin\\noticias\\edit.php', 164)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\noticias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/noticias/edit.php', [], true)
+ 5 APPPATH\Controllers\Admin\Produtos.php(164): view('admin/noticias/edit.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Produtos->edit('25')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-19 15:13:32 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`produtos`, CONSTRAINT `produtos-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `produtos_categorias` (`id`)) in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\startcommerce\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Produtos.php(116): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Produtos.php(74): App\Controllers\Admin\Produtos->save()
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Produtos->create()
+#10 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#11 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-02-19 15:13:32 --> Cannot add or update a child row: a foreign key constraint fails (`startcommerce`.`produtos`, CONSTRAINT `produtos-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `produtos_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `produtos` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataCadastro`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'1\', \'2025-02-19\', \'55\', \'http://local.starcommerce/uploads/img/1739992410.png\', \'2025-02-19 15:13:32\', \'2025-02-19 15:13:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produtos` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataCadastro`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'1\', \'2025-02-19\', \'55\', \'http://local.starcommerce/uploads/img/1739992410.png\', \'2025-02-19 15:13:32\', \'2025-02-19 15:13:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produtos` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataCadastro`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'Cesta Amore Mio\', \'1\', \'2025-02-19\', \'55\', \'http://local.starcommerce/uploads/img/1739992410.png\', \'2025-02-19 15:13:32\', \'2025-02-19 15:13:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produtos` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataCadastro`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataCadastro:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Produtos.php(116): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Produtos.php(74): App\Controllers\Admin\Produtos->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Produtos->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-19 15:15:46 --> mysqli_sql_exception: Unknown column 'idNoticia' in 'where clause' in C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\startcommerce\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\startcommerce\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\startcommerce\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\startcommerce\project\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\startcommerce\project\system\BaseModel.php(525): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\startcommerce\project\app\Controllers\Admin\Produtos.php(227): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(925): App\Controllers\Admin\Produtos->galery('27')
+#8 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#9 C:\wamp64\www\startcommerce\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\startcommerce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-02-19 15:15:46 --> Unknown column 'idNoticia' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `produtos_imagens`
+WHERE `idNoticia` = \'27\'
+AND `produtos_imagens`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `produtos_imagens`
+WHERE `idNoticia` = \'27\'
+AND `produtos_imagens`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `produtos_imagens`
+WHERE `idNoticia` = \'27\'
+AND `produtos_imagens`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produtos_imagens`
+WHERE `idNoticia` = :idNoticia:
+AND `produtos_imagens`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(525): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Admin\Produtos.php(227): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Produtos->galery('27')
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

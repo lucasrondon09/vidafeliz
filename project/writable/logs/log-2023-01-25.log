@@ -1,0 +1,94 @@
+CRITICAL - 2023-01-25 13:15:20 --> Arquivo inválido: admin/galerias/images.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/galerias/images.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/galerias/images.php', [], true)
+ 3 APPPATH\Controllers\Admin\Galeria.php(253): view('admin/galerias/images.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->images('2')
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 14:33:16 --> Undefined variable: fields
+in APPPATH\Views\admin\galerias\images.php on line 80.
+ 1 APPPATH\Views\admin\galerias\images.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: fields', 'APPPATH\\Views\\admin\\galerias\\images.php', 80, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\galerias\\images.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/galerias/images.php', [], true)
+ 5 APPPATH\Controllers\Admin\Galeria.php(258): view('admin/galerias/images.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->images('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 14:36:21 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 277.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 14:39:05 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 14:39:25 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:01:14 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:01:32 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:02:56 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 276.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->upload('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:03:11 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 276.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->upload('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:08:34 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:12:35 --> Invalid argument supplied for foreach()
+in APPPATH\Controllers\Admin\Galeria.php on line 285.
+ 1 APPPATH\Controllers\Admin\Galeria.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Controllers\\Admin\\Galeria.php', 285, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:13:36 --> Call to a member function initialize() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 279.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:13:50 --> Undefined variable: upload
+in APPPATH\Controllers\Admin\Galeria.php on line 287.
+ 1 APPPATH\Controllers\Admin\Galeria.php(287): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: upload', 'APPPATH\\Controllers\\Admin\\Galeria.php', 287, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-25 15:14:31 --> Call to a member function doUpload() on null
+in APPPATH\Controllers\Admin\Galeria.php on line 287.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Galeria->uploadImages('(:num)')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Galeria))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

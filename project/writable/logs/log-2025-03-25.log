@@ -1,0 +1,17 @@
+CRITICAL - 2025-03-25 10:12:29 --> Undefined index: parentesco
+in APPPATH\Controllers\Admin\Pais.php on line 124.
+ 1 APPPATH\Controllers\Admin\Pais.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: parentesco', 'APPPATH\\Controllers\\Admin\\Pais.php', 124, [...])
+ 2 APPPATH\Controllers\Admin\Pais.php(70): App\Controllers\Admin\Pais->save()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Pais->create()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pais))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-25 11:09:50 --> syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file
+in APPPATH\Views\admin\pais\index.php on line 139.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/pais/index.php', [], true)
+ 3 APPPATH\Controllers\Admin\Pais.php(48): view('admin/pais/index.php', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Pais->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pais))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

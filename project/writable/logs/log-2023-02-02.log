@@ -1,0 +1,118 @@
+CRITICAL - 2023-02-02 12:40:35 --> Undefined property: stdClass::$link
+in APPPATH\Views\admin\banners\edit.php on line 87.
+ 1 APPPATH\Views\admin\banners\edit.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$link', 'APPPATH\\Views\\admin\\banners\\edit.php', 87, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\banners\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/banners/edit.php', [], true)
+ 5 APPPATH\Controllers\Admin\Banners.php(194): view('admin/banners/edit.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 12:41:03 --> Undefined property: stdClass::$link
+in APPPATH\Views\admin\banners\edit.php on line 90.
+ 1 APPPATH\Views\admin\banners\edit.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$link', 'APPPATH\\Views\\admin\\banners\\edit.php', 90, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\banners\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/banners/edit.php', [], true)
+ 5 APPPATH\Controllers\Admin\Banners.php(194): view('admin/banners/edit.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Banners->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Banners))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:13:14 --> Class 'App\Models\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:13:46 --> Class 'App\Models\admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:14:40 --> Class 'App\Models\Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:15:27 --> Class 'App\Controllers\Admin\Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:15:35 --> Class 'App\Controllers\Admin\Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:15:46 --> Class 'App\Controllers\Admin\Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:16:06 --> Class 'Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:18:58 --> Class 'App\Models\CategoriaModel' not found
+in APPPATH\Controllers\Admin\Categorias.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Categorias->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:22:48 --> Class 'App\Models\CategoriaGaleriaModel' not found
+in APPPATH\Controllers\Admin\Galeria.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Galeria->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:22:55 --> Class 'App\Models\CategoriaGaleriaModel' not found
+in APPPATH\Controllers\Admin\CategoriasGaleria.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\CategoriasGaleria->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:24:43 --> Class 'App\Models\Admin\GaleriaModel' not found
+in APPPATH\Controllers\Admin\Galeria.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Galeria->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:27:56 --> Class 'App\Models\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:28:07 --> Class 'App\Models\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:28:46 --> Class 'App\Models\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:31:48 --> Class 'App\Controllers\Admin\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Home.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-02 17:34:36 --> Class 'App\Models\UsuarioModel' not found
+in APPPATH\Controllers\Admin\Auth.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Auth->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

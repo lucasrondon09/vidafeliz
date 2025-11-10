@@ -1,0 +1,557 @@
+CRITICAL - 2025-07-02 21:47:32 --> Maximum execution time of 120 seconds exceeded
+in C:\wamp64\www\secretaria-digital\vendor\mpdf\mpdf\src\Image\ImageProcessor.php on line 230.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-02 21:47:32 --> Maximum execution time of 120 seconds exceeded
+in C:\wamp64\www\secretaria-digital\vendor\mpdf\mpdf\src\Image\ImageProcessor.php on line 230.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-07-02 23:13:15 --> App\Libraries\PdfGenerator::generate(): Return value must be of type string, null returned
+in APPPATH\Libraries\PdfGenerator.php on line 23.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(132): App\Libraries\PdfGenerator->generate('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ficha de Matrícula (2025)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      font-size: 14px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+    h2 {
+      text-align: center;
+      margin: 5px 0 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    h3 {
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    td, th {
+      border: 1px solid #000;
+      padding: 3px;
+      vertical-align: top;
+    }
+    .foto-box {
+      width: 113px;
+      height: 151px;
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 151px;
+      font-size: 12px;
+    }
+    .assinatura {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="http://local.secretaria/assets/dist/img/logo-relatorio.jpg" alt="Logo da Escola" width="150" height="auto">
+  </div>
+
+  <h2>Ficha de Matrícula</h2>
+
+  <table>
+    <tr>
+      <td colspan="4">Nome do Aluno (a):</td>
+      <td rowspan="7" class="foto-box">FOTO</td>
+    </tr>
+    <tr>
+      <td>Data de Nascimento:</td>
+      <td>Idade:</td>
+      <td>Sexo:</td>
+      <td>Tipo Sanguíneo:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Série:</td>
+      <td colspan="2">Período: ( ) Matutino &nbsp;&nbsp; ( ) Vespertino</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Doenças Crônicas:</strong> Bronquite ( ) Hipertensão ( ) Asma ( ) Diabetes ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Necessidades Especiais:</strong> Física ( ) Visual ( ) Auditiva ( ) Verbal ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Plano de Saúde: ( ) Sim &nbsp;&nbsp; ( ) Não</td>
+      <td colspan="3">Em caso de Emergência Comunicar: </td>
+    </tr>
+    <tr>
+      <td colspan="5">Telefone para Contato Emergencial:</td>
+    </tr>
+  </table>
+
+  <h3>Dados Familiares</h3>
+  <table>
+    <tr><td colspan="3">Nome do Pai:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+    <tr><td colspan="3">Nome da Mãe:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+  </table>
+
+  <h3>Dados do Responsável Financeiro</h3>
+  <table>
+    <tr><td>Nome:</td><td>CPF:</td><td>Celular:</td></tr>
+    <tr><td colspan="3">Endereço:</td></tr>
+  </table>
+
+  <h3>Responsáveis pela Retirada da Criança</h3>
+  <table>
+    <tr><td>1 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>2 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>3 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>4 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>5 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>6 - _____________________________________ Cel: _________________________</td></tr>
+  </table>
+
+  <div class="assinatura">
+    <p>Cuiabá/MT, ______ de ______________ de _________</p><br>
+    <p>_________________________________________________</p>
+    <p>ASSINATURA DO RESPONSÁVEL</p>
+  </div>
+
+</body>
+</html>
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+', 'Ficha_Matricula.pdf', 'D')
+ 2 APPPATH\Controllers\Admin\Relatorios.php(119): App\Controllers\Admin\Relatorios->gerarPdf('Ficha_Matricula.pdf', 'D')
+ 3 APPPATH\Controllers\Admin\Relatorios.php(76): App\Controllers\Admin\Relatorios->fichaMatricula('C:\\wamp64\\www\\secretaria-digital\\public', 'C:\\wamp64\\www\\secretaria-digital\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-02 23:13:47 --> App\Libraries\PdfGenerator::generate(): Return value must be of type string, null returned
+in APPPATH\Libraries\PdfGenerator.php on line 23.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(132): App\Libraries\PdfGenerator->generate('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ficha de Matrícula (2025)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      font-size: 14px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+    h2 {
+      text-align: center;
+      margin: 5px 0 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    h3 {
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    td, th {
+      border: 1px solid #000;
+      padding: 3px;
+      vertical-align: top;
+    }
+    .foto-box {
+      width: 113px;
+      height: 151px;
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 151px;
+      font-size: 12px;
+    }
+    .assinatura {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="http://local.secretaria/assets/dist/img/logo-relatorio.jpg" alt="Logo da Escola" width="150" height="auto">
+  </div>
+
+  <h2>Ficha de Matrícula</h2>
+
+  <table>
+    <tr>
+      <td colspan="4">Nome do Aluno (a):</td>
+      <td rowspan="7" class="foto-box">FOTO</td>
+    </tr>
+    <tr>
+      <td>Data de Nascimento:</td>
+      <td>Idade:</td>
+      <td>Sexo:</td>
+      <td>Tipo Sanguíneo:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Série:</td>
+      <td colspan="2">Período: ( ) Matutino &nbsp;&nbsp; ( ) Vespertino</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Doenças Crônicas:</strong> Bronquite ( ) Hipertensão ( ) Asma ( ) Diabetes ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Necessidades Especiais:</strong> Física ( ) Visual ( ) Auditiva ( ) Verbal ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Plano de Saúde: ( ) Sim &nbsp;&nbsp; ( ) Não</td>
+      <td colspan="3">Em caso de Emergência Comunicar: </td>
+    </tr>
+    <tr>
+      <td colspan="5">Telefone para Contato Emergencial:</td>
+    </tr>
+  </table>
+
+  <h3>Dados Familiares</h3>
+  <table>
+    <tr><td colspan="3">Nome do Pai:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+    <tr><td colspan="3">Nome da Mãe:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+  </table>
+
+  <h3>Dados do Responsável Financeiro</h3>
+  <table>
+    <tr><td>Nome:</td><td>CPF:</td><td>Celular:</td></tr>
+    <tr><td colspan="3">Endereço:</td></tr>
+  </table>
+
+  <h3>Responsáveis pela Retirada da Criança</h3>
+  <table>
+    <tr><td>1 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>2 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>3 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>4 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>5 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>6 - _____________________________________ Cel: _________________________</td></tr>
+  </table>
+
+  <div class="assinatura">
+    <p>Cuiabá/MT, ______ de ______________ de _________</p><br>
+    <p>_________________________________________________</p>
+    <p>ASSINATURA DO RESPONSÁVEL</p>
+  </div>
+
+</body>
+</html>
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+', 'Ficha_Matricula.pdf', 'D')
+ 2 APPPATH\Controllers\Admin\Relatorios.php(119): App\Controllers\Admin\Relatorios->gerarPdf('Ficha_Matricula.pdf', 'D')
+ 3 APPPATH\Controllers\Admin\Relatorios.php(76): App\Controllers\Admin\Relatorios->fichaMatricula('C:\\wamp64\\www\\secretaria-digital\\public', 'C:\\wamp64\\www\\secretaria-digital\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-02 23:15:58 --> App\Libraries\PdfGenerator::generate(): Return value must be of type string, null returned
+in APPPATH\Libraries\PdfGenerator.php on line 23.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(132): App\Libraries\PdfGenerator->generate('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ficha de Matrícula (2025)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      font-size: 14px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+    h2 {
+      text-align: center;
+      margin: 5px 0 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    h3 {
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    td, th {
+      border: 1px solid #000;
+      padding: 3px;
+      vertical-align: top;
+    }
+    .foto-box {
+      width: 113px;
+      height: 151px;
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 151px;
+      font-size: 12px;
+    }
+    .assinatura {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="http://local.secretaria/assets/dist/img/logo-relatorio.jpg" alt="Logo da Escola" width="150" height="auto">
+  </div>
+
+  <h2>Ficha de Matrícula</h2>
+
+  <table>
+    <tr>
+      <td colspan="4">Nome do Aluno (a):</td>
+      <td rowspan="7" class="foto-box">FOTO</td>
+    </tr>
+    <tr>
+      <td>Data de Nascimento:</td>
+      <td>Idade:</td>
+      <td>Sexo:</td>
+      <td>Tipo Sanguíneo:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Série:</td>
+      <td colspan="2">Período: ( ) Matutino &nbsp;&nbsp; ( ) Vespertino</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Doenças Crônicas:</strong> Bronquite ( ) Hipertensão ( ) Asma ( ) Diabetes ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="4"><strong>Necessidades Especiais:</strong> Física ( ) Visual ( ) Auditiva ( ) Verbal ( )</td>
+    </tr>
+    <tr>
+      <td colspan="4">Outros:</td>
+    </tr>
+    <tr>
+      <td colspan="2">Plano de Saúde: ( ) Sim &nbsp;&nbsp; ( ) Não</td>
+      <td colspan="3">Em caso de Emergência Comunicar: </td>
+    </tr>
+    <tr>
+      <td colspan="5">Telefone para Contato Emergencial:</td>
+    </tr>
+  </table>
+
+  <h3>Dados Familiares</h3>
+  <table>
+    <tr><td colspan="3">Nome do Pai:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+    <tr><td colspan="3">Nome da Mãe:</td></tr>
+    <tr><td>CPF:</td><td>RG:</td><td>Telefone:</td></tr>
+    <tr><td>Profissão:</td><td colspan="2">E-mail:</td></tr>
+    <tr><td colspan="3">Endereço: </td></tr>
+  </table>
+
+  <h3>Dados do Responsável Financeiro</h3>
+  <table>
+    <tr><td>Nome:</td><td>CPF:</td><td>Celular:</td></tr>
+    <tr><td colspan="3">Endereço:</td></tr>
+  </table>
+
+  <h3>Responsáveis pela Retirada da Criança</h3>
+  <table>
+    <tr><td>1 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>2 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>3 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>4 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>5 - _____________________________________ Cel: _________________________</td></tr>
+    <tr><td>6 - _____________________________________ Cel: _________________________</td></tr>
+  </table>
+
+  <div class="assinatura">
+    <p>Cuiabá/MT, ______ de ______________ de _________</p><br>
+    <p>_________________________________________________</p>
+    <p>ASSINATURA DO RESPONSÁVEL</p>
+  </div>
+
+</body>
+</html>
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\admin\\relatorios\\ficha-matricula.php -->
+', 'Ficha_Matricula.pdf', 'D')
+ 2 APPPATH\Controllers\Admin\Relatorios.php(119): App\Controllers\Admin\Relatorios->gerarPdf('Ficha_Matricula.pdf', 'D')
+ 3 APPPATH\Controllers\Admin\Relatorios.php(76): App\Controllers\Admin\Relatorios->fichaMatricula('C:\\wamp64\\www\\secretaria-digital\\public', 'C:\\wamp64\\www\\secretaria-digital\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-02 23:18:49 --> App\Libraries\PdfGenerator::generate(): Return value must be of type string, null returned
+in APPPATH\Libraries\PdfGenerator.php on line 23.
+ 1 APPPATH\Controllers\Admin\Relatorios.php(132): App\Libraries\PdfGenerator->generate('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\admin\\relatorios\\declaracao-escolaridade.php -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Declaração de Escolaridade</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: \'Times New Roman\', serif;
+            background-color: #fff;
+        }
+
+        .page {
+            padding: 40px 60px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .school-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 40px;
+        }
+
+        .content {
+            margin-bottom: 80px; /* espaço para o rodapé não sobrepor */
+        }
+
+        .indent {
+            text-indent: 50px;
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .signature {
+            text-align: right;
+            font-size: 16px;
+        }
+
+        .rodape {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .rodape img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="header">
+            <img src="http://local.secretaria/assets/dist/img/logo-relatorio.jpg" alt="Logotipo da Escola" width="150">
+        </div>
+
+        <div class="content">
+            <h2>DECLARAÇÃO DE ESCOLARIDADE</h2>
+
+            <p class="indent">
+                Declaro a quem possa interessar que, <strong>Isadora Passos Rondon</strong>, nascido(a) em <strong>01/11/2018</strong> — natural de <strong>Cuiabana</strong>, filho(a) de <strong>Vivian Caroline Passos Rondon</strong> e <strong>Lucas Rafael Muniz Rondon</strong>, aluno(a) deste estabelecimento de ensino, cursando o <strong>1º ANO A</strong>, no período <strong>Matutino</strong>, do ano letivo de <strong>2025</strong>, encontra-se frequentando regularmente as aulas.
+            </p>
+
+            <p class="indent">
+                Nada mais a declarar. Por ser expressão da verdade, firmo a presente.
+            </p>
+
+            <p class="signature">
+                Cuiabá, 2 de julho de 2025.
+            </p>
+        </div>
+    </div>
+
+    <div class="rodape">
+        <img src="http://local.secretaria/assets/dist/img/rodape_relatorio.png" alt="Rodapé">
+    </div>
+
+</body>
+</html>
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\admin\\relatorios\\declaracao-escolaridade.php -->
+', 'relatorio.pdf', 'I')
+ 2 APPPATH\Controllers\Admin\Relatorios.php(99): App\Controllers\Admin\Relatorios->gerarPdf()
+ 3 APPPATH\Controllers\Admin\Relatorios.php(74): App\Controllers\Admin\Relatorios->declaracaoEscolaridade('1', '2')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

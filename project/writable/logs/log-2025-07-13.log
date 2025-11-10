@@ -1,0 +1,11 @@
+CRITICAL - 2025-07-13 00:02:12 --> Attempt to read property "id" on null
+in APPPATH\Views\admin\turmas\avaliacao-individual.php on line 136.
+ 1 APPPATH\Views\admin\turmas\avaliacao-individual.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php', 136)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\avaliacao-individual.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/avaliacao-individual.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(846): view('admin/turmas/avaliacao-individual.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->avaliacaoIndividual('2')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

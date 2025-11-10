@@ -1,0 +1,695 @@
+CRITICAL - 2025-04-21 09:31:11 --> Undefined variable: title
+in APPPATH\Views\admin\turmas\index.php on line 11.
+ 1 APPPATH\Views\admin\turmas\index.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\admin\\turmas\\index.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(50): view('admin/turmas/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 10:27:53 --> Array to string conversion
+in APPPATH\Views\admin\turmas\index.php on line 102.
+ 1 APPPATH\Views\admin\turmas\index.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\admin\\turmas\\index.php', 102, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(51): view('admin/turmas/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 10:30:03 --> Array to string conversion
+in APPPATH\Views\admin\turmas\index.php on line 102.
+ 1 APPPATH\Views\admin\turmas\index.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\admin\\turmas\\index.php', 102, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(51): view('admin/turmas/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 11:59:14 --> Undefined variable: turmas
+in APPPATH\Views\admin\alunos\crud.php on line 153.
+ 1 APPPATH\Views\admin\alunos\crud.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turmas', 'APPPATH\\Views\\admin\\alunos\\crud.php', 153, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(206): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 11:59:47 --> Undefined variable: turmas
+in APPPATH\Views\admin\alunos\crud.php on line 153.
+ 1 APPPATH\Views\admin\alunos\crud.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turmas', 'APPPATH\\Views\\admin\\alunos\\crud.php', 153, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(208): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 11:59:57 --> Undefined variable: turmas
+in APPPATH\Views\admin\alunos\crud.php on line 153.
+ 1 APPPATH\Views\admin\alunos\crud.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turmas', 'APPPATH\\Views\\admin\\alunos\\crud.php', 153, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(208): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:00:45 --> Call to undefined method App\Models\Admin\ParametrosModel::getNumRows
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Models\Admin\TurmasModel.php(34): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Admin\Alunos.php(77): App\Models\Admin\TurmasModel->get()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:02:17 --> Call to undefined method App\Models\Admin\ParametrosModel::getNumRows
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Models\Admin\TurmasModel.php(35): CodeIgniter\Model->__call('getNumRows', [])
+ 2 APPPATH\Controllers\Admin\Alunos.php(77): App\Models\Admin\TurmasModel->get()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:02:42 --> Call to undefined method App\Models\Admin\ParametrosModel::getRow
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Models\Admin\TurmasModel.php(35): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Admin\Alunos.php(77): App\Models\Admin\TurmasModel->get()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:02:49 --> Call to undefined method App\Models\Admin\ParametrosModel::getRow
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Models\Admin\TurmasModel.php(37): CodeIgniter\Model->__call('getRow', [])
+ 2 APPPATH\Controllers\Admin\Alunos.php(77): App\Models\Admin\TurmasModel->get()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 12:26:39 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:26:39 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:28:48 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:28:48 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:29:16 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:29:16 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:30:10 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:30:10 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:30:32 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:30:32 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:30:51 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:30:51 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:31:16 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(143): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:31:16 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:32:04 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(142): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:32:04 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:33:08 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(146): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:33:08 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:34:27 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(149): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:34:27 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+ERROR - 2025-04-21 12:37:00 --> mysqli_sql_exception: Table 'secretaria_digital.alunos_turmas' doesn't exist in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `al...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `al...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `al...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\secretaria-digital\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(151): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(96): App\Controllers\Admin\Alunos->setCreate()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->create('92')
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#11 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2025-04-21 12:37:00 --> Table 'secretaria_digital.alunos_turmas' doesn't exist
+CRITICAL - 2025-04-21 12:54:40 --> Undefined variable: turmas
+in APPPATH\Views\admin\alunos\crud.php on line 154.
+ 1 APPPATH\Views\admin\alunos\crud.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turmas', 'APPPATH\\Views\\admin\\alunos\\crud.php', 154, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(225): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('27', '92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:55:15 --> Undefined property: stdClass::$id_turma
+in APPPATH\Views\admin\alunos\crud.php on line 155.
+ 1 APPPATH\Views\admin\alunos\crud.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma', 'APPPATH\\Views\\admin\\alunos\\crud.php', 155, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(225): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('27', '92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:55:34 --> Undefined property: stdClass::$id_turma
+in APPPATH\Views\admin\alunos\crud.php on line 155.
+ 1 APPPATH\Views\admin\alunos\crud.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma', 'APPPATH\\Views\\admin\\alunos\\crud.php', 155, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(225): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('27', '92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 12:57:41 --> Undefined property: stdClass::$id_turma
+in APPPATH\Views\admin\alunos\crud.php on line 155.
+ 1 APPPATH\Views\admin\alunos\crud.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma', 'APPPATH\\Views\\admin\\alunos\\crud.php', 155, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\crud.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/crud.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(189): view('admin/alunos/crud.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->read('27', '92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:12:15 --> Trying to get property 'id_turma' of non-object
+in APPPATH\Controllers\Admin\Alunos.php on line 220.
+ 1 APPPATH\Controllers\Admin\Alunos.php(220): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\Alunos.php', 220, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->update('1', '92')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:27:17 --> Call to undefined method App\Models\Admin\TurmasModel::getAlunosByTurmaId
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\Turmas.php(249): CodeIgniter\Model->__call('getAlunosByTurmaId', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:35:10 --> Undefined variable: url
+in APPPATH\Views\admin\turmas\alunos.php on line 35.
+ 1 APPPATH\Views\admin\turmas\alunos.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: url', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(261): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:35:27 --> Undefined property: stdClass::$id
+in APPPATH\Views\admin\turmas\alunos.php on line 109.
+ 1 APPPATH\Views\admin\turmas\alunos.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 109, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(262): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:35:48 --> Undefined property: stdClass::$id
+in APPPATH\Views\admin\turmas\alunos.php on line 109.
+ 1 APPPATH\Views\admin\turmas\alunos.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 109, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(263): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:37:01 --> Call to a member function links() on null
+in APPPATH\Views\admin\turmas\alunos.php on line 125.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(264): view('admin/turmas/alunos.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:41:32 --> Call to a member function links() on null
+in APPPATH\Views\admin\turmas\alunos.php on line 125.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(272): view('admin/turmas/alunos.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:42:30 --> Call to a member function links() on null
+in APPPATH\Views\admin\turmas\alunos.php on line 125.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(272): view('admin/turmas/alunos.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:43:04 --> Call to a member function links() on null
+in APPPATH\Views\admin\turmas\alunos.php on line 125.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(274): view('admin/turmas/alunos.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:43:09 --> Call to a member function links() on null
+in APPPATH\Views\admin\turmas\alunos.php on line 125.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(274): view('admin/turmas/alunos.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 13:44:59 --> Undefined property: stdClass::$aluno_id
+in APPPATH\Views\admin\turmas\alunos.php on line 109.
+ 1 APPPATH\Views\admin\turmas\alunos.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$aluno_id', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 109, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(274): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunos('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 17:51:13 --> Undefined index: turma
+CRITICAL - 2025-04-21 18:22:24 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::like() must be of the type string, null given, called in C:\wamp64\www\secretaria-digital\project\system\Model.php on line 809
+in SYSTEMPATH\Database\BaseBuilder.php on line 954.
+ 1 SYSTEMPATH\Model.php(809): CodeIgniter\Database\BaseBuilder->like('nome', null)
+ 2 APPPATH\Controllers\Admin\Alunos.php(81): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\Admin\Alunos.php(35): App\Controllers\Admin\Alunos->index()
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->alunosTurmas('1')
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 18:22:49 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(80): CodeIgniter\BaseModel->paginate(10)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(35): App\Controllers\Admin\Alunos->index()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->alunosTurmas('1')
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-04-21 18:22:49 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+WHERE `alunos_turmas`.`id_turma` = \'1\'
+AND `deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+WHERE `alunos_turmas`.`id_turma` = \'1\'
+AND `deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+WHERE `alunos_turmas`.`id_turma` = \'1\'
+AND `deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `alunos`
+JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+WHERE `alunos_turmas`.`id_turma` = :alunos_turmas.id_turma:
+AND `deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Alunos.php(80): CodeIgniter\BaseModel->paginate(10)
+ 8 APPPATH\Controllers\Admin\Alunos.php(35): App\Controllers\Admin\Alunos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->alunosTurmas('1')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 18:51:52 --> Undefined index: turma
+CRITICAL - 2025-04-21 19:12:34 --> Undefined property: stdClass::$nome_turma
+in APPPATH\Views\admin\alunos\index.php on line 103.
+ 1 APPPATH\Views\admin\alunos\index.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome_turma', 'APPPATH\\Views\\admin\\alunos\\index.php', 103, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Alunos.php(98): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 19:19:13 --> mysqli_sql_exception: Duplicate column name 'id' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-21 19:19:13 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 19:19:40 --> mysqli_sql_exception: Duplicate column name 'id' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+#6 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+#7 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-04-21 19:19:40 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `alunos`.`id` as `id`, `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos`.`deleted_at` IS NULL
+GROUP BY `alunos`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(575): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1108): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-04-21 19:25:36 --> mysqli_sql_exception: Unknown column 'turmas.ano' in 'field list' in C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\secretaria-digital\project\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`...', 0)
+#1 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`...')
+#2 C:\wamp64\www\secretaria-digital\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`...')
+#3 C:\wamp64\www\secretaria-digital\project\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`...', Array, false)
+#4 C:\wamp64\www\secretaria-digital\project\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(10, 0)
+#6 C:\wamp64\www\secretaria-digital\project\system\BaseModel.php(1112): CodeIgniter\BaseModel->findAll(10, 0)
+#7 C:\wamp64\www\secretaria-digital\project\app\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+#8 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+#9 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+#10 C:\wamp64\www\secretaria-digital\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\secretaria-digital\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-04-21 19:25:36 --> Unknown column 'turmas.ano' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`ano` as `ano_turma`, `turmas`.`turno` as `turno_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos_turmas`.`deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`ano` as `ano_turma`, `turmas`.`turno` as `turno_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos_turmas`.`deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`ano` as `ano_turma`, `turmas`.`turno` as `turno_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos_turmas`.`deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `alunos`.*, `alunos_turmas`.`id_turma`, `turmas`.`nome` as `nome_turma`, `turmas`.`ano` as `ano_turma`, `turmas`.`turno` as `turno_turma`
+FROM `alunos`
+LEFT JOIN `alunos_turmas` ON `alunos_turmas`.`id_aluno` = `alunos`.`id`
+LEFT JOIN `turmas` ON `turmas`.`id` = `alunos_turmas`.`id_turma`
+WHERE `alunos_turmas`.`deleted_at` is null
+AND `alunos`.`deleted_at` IS NULL
+ LIMIT 10', [], false)
+ 5 SYSTEMPATH\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(10, 0)
+ 7 SYSTEMPATH\BaseModel.php(1112): CodeIgniter\BaseModel->findAll(10, 0)
+ 8 APPPATH\Controllers\Admin\Alunos.php(50): CodeIgniter\BaseModel->paginate(10)
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 19:26:02 --> Call to undefined function getPeriodos()
+in APPPATH\Views\admin\alunos\index.php on line 105.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 4 APPPATH\Controllers\Admin\Alunos.php(98): view('admin/alunos/index.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-21 19:32:49 --> Call to a member function where() on array
+in APPPATH\Controllers\Admin\Alunos.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Alunos->index('92')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Alunos))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

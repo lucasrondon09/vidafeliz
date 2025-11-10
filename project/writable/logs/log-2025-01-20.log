@@ -1,0 +1,21 @@
+CRITICAL - 2025-01-20 17:23:14 --> Creation of dynamic property App\Controllers\Admin\Home::$data is deprecated
+in APPPATH\Controllers\Admin\Home.php on line 20.
+ 1 APPPATH\Controllers\Admin\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Admin\\Home::$data is deprecated', 'APPPATH\\Controllers\\Admin\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 17:24:07 --> Creation of dynamic property App\Controllers\Admin\Usuarios::$model is deprecated
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 APPPATH\Controllers\Admin\Usuarios.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Admin\\Usuarios::$model is deprecated', 'APPPATH\\Controllers\\Admin\\Usuarios.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-20 17:24:35 --> Creation of dynamic property App\Controllers\Admin\Usuarios::$model is deprecated
+in APPPATH\Controllers\Admin\Usuarios.php on line 16.
+ 1 APPPATH\Controllers\Admin\Usuarios.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Creation of dynamic property App\\Controllers\\Admin\\Usuarios::$model is deprecated', 'APPPATH\\Controllers\\Admin\\Usuarios.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(887): App\Controllers\Admin\Usuarios->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(471): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

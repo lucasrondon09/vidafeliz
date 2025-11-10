@@ -1,0 +1,303 @@
+CRITICAL - 2023-02-03 12:58:58 --> Arquivo inválido: admin/sobre.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sobre.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sobre.php', [], true)
+ 3 APPPATH\Controllers\Admin\Home.php(45): view('admin/sobre.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->sobre()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-03 12:59:32 --> Arquivo inválido: admin/sobre.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sobre.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sobre.php', [], true)
+ 3 APPPATH\Controllers\Admin\Home.php(45): view('admin/sobre.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->sobre()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-03 13:00:05 --> Arquivo inválido: admin/sobre.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sobre.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sobre.php', [], true)
+ 3 APPPATH\Controllers\Admin\Home.php(45): view('admin/sobre.php')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Home->sobre()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-03 13:53:23 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:53:25 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:53:45 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:55:06 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:55:31 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:58:25 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:58:26 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:58:27 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 13:58:28 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:00:29 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:09:33 --> Use of undefined constant FCPPATH - assumed 'FCPPATH' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\admin\noticias\edit.php on line 189.
+ 1 APPPATH\Views\admin\noticias\edit.php(189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant FCPPATH - assumed \'FCPPATH\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\admin\\noticias\\edit.php', 189, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\noticias\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/noticias/edit.php', [], true)
+ 5 APPPATH\Controllers\Admin\Noticias.php(164): view('admin/noticias/edit.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-03 14:10:16 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:10:43 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:10:59 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:11:00 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:12:26 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:12:49 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:12:52 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-03 14:12:54 --> Uncaught ErrorException: realpath() expects parameter 1 to be a valid path, string given in C:\wamp64\www\admin\project\system\Common.php:91
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'realpath() expe...', 'C:\\wamp64\\www\\a...', 91, Array)
+#1 C:\wamp64\www\admin\project\system\Common.php(91): realpath('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#2 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(517): clean_path('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#3 [internal function]: CodeIgniter\Debug\Exceptions::CodeIgniter\Debug\{closure}('\x89PNG\r\n\x1A\n\x00\x00\x00\rIHD...')
+#4 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(522): array_map(Object(Closure), Array)
+#5 C:\wamp64\www\admin\project\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions::renderBacktrace(Array)
+#6 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown
+in SYSTEMPATH\Common.php on line 91.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-02-03 15:04:24 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`admin`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`)) in C:\wamp64\www\admin\project\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\admin\project\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `no...', 0)
+#1 C:\wamp64\www\admin\project\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `no...')
+#2 C:\wamp64\www\admin\project\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `no...')
+#3 C:\wamp64\www\admin\project\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `no...', Array, false)
+#4 C:\wamp64\www\admin\project\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\admin\project\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\admin\project\system\Model.php(699): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\admin\project\app\Controllers\Admin\Noticias.php(116): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\admin\project\app\Controllers\Admin\Noticias.php(74): App\Controllers\Admin\Noticias->save()
+#9 C:\wamp64\www\admin\project\system\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+#10 C:\wamp64\www\admin\project\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+#11 C:\wamp64\www\admin\project\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\wamp64\www\admin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-03 15:04:24 --> Cannot add or update a child row: a foreign key constraint fails (`admin`.`noticias`, CONSTRAINT `noticia-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `noticias_categorias` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Notícia teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2023-02-03\', \'Selecione\', \'http://local.admin/uploads/img/1675451060.png\', \'2023-02-03 15:04:24\', \'2023-02-03 15:04:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Notícia teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2023-02-03\', \'Selecione\', \'http://local.admin/uploads/img/1675451060.png\', \'2023-02-03 15:04:24\', \'2023-02-03 15:04:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (\'149\', \'Notícia teste\', \'\', \'                          \\r\\n                        \', \'1\', \'2023-02-03\', \'Selecione\', \'http://local.admin/uploads/img/1675451060.png\', \'2023-02-03 15:04:24\', \'2023-02-03 15:04:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `noticias` (`idUsuario`, `titulo`, `subtitulo`, `texto`, `status`, `dataNoticia`, `idCategoria`, `capa`, `created_at`, `updated_at`) VALUES (:idUsuario:, :titulo:, :subtitulo:, :texto:, :status:, :dataNoticia:, :idCategoria:, :capa:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(699): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Noticias.php(116): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\Noticias.php(74): App\Controllers\Admin\Noticias->save()
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Noticias->create()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Noticias))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

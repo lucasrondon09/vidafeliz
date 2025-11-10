@@ -1,0 +1,119 @@
+CRITICAL - 2025-04-24 08:36:45 --> Undefined variable: id_pai
+in APPPATH\Views\admin\alunos\index.php on line 39.
+ 1 APPPATH\Views\admin\alunos\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_pai', 'APPPATH\\Views\\admin\\alunos\\index.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(74): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunosTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 08:41:43 --> Undefined variable: id_pai
+in APPPATH\Views\admin\alunos\index.php on line 108.
+ 1 APPPATH\Views\admin\alunos\index.php(108): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_pai', 'APPPATH\\Views\\admin\\alunos\\index.php', 108, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\alunos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/alunos/index.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(74): view('admin/alunos/index.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunosTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 08:49:36 --> Undefined variable: id_pai
+in APPPATH\Views\admin\turmas\alunos.php on line 25.
+ 1 APPPATH\Views\admin\turmas\alunos.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_pai', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(77): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunosTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:01:50 --> Call to undefined method App\Models\Admin\AlunosModel::endGroup
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Controllers\Admin\Turmas.php(85): CodeIgniter\Model->__call('endGroup', [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunosTurmas('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:24:11 --> Undefined variable: turma_aluno
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 105.
+ 1 APPPATH\Views\admin\turmas\transferir-aluno.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turma_aluno', 'APPPATH\\Views\\admin\\turmas\\transferir-aluno.php', 105, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\transferir-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(137): view('admin/turmas/transferir-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '27')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:24:41 --> Undefined variable: turma_id
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 105.
+ 1 APPPATH\Views\admin\turmas\transferir-aluno.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turma_id', 'APPPATH\\Views\\admin\\turmas\\transferir-aluno.php', 105, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\transferir-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(137): view('admin/turmas/transferir-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '27')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:25:36 --> Undefined variable: turma_id
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 94.
+ 1 APPPATH\Views\admin\turmas\transferir-aluno.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: turma_id', 'APPPATH\\Views\\admin\\turmas\\transferir-aluno.php', 94, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\transferir-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(137): view('admin/turmas/transferir-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '27')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:43:48 --> Undefined property: stdClass::$turma_atual
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 88.
+ 1 APPPATH\Views\admin\turmas\transferir-aluno.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$turma_atual', 'APPPATH\\Views\\admin\\turmas\\transferir-aluno.php', 88, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\transferir-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(138): view('admin/turmas/transferir-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '27')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:48:26 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 110.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 4 APPPATH\Controllers\Admin\Turmas.php(140): view('admin/turmas/transferir-aluno.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:48:38 --> Trying to get property 'id_turma' of non-object
+in APPPATH\Controllers\Admin\Turmas.php on line 114.
+ 1 APPPATH\Controllers\Admin\Turmas.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_turma\' of non-object', 'APPPATH\\Controllers\\Admin\\Turmas.php', 114, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:49:56 --> Trying to get property 'nome' of non-object
+in APPPATH\Controllers\Admin\Turmas.php on line 119.
+ 1 APPPATH\Controllers\Admin\Turmas.php(119): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'nome\' of non-object', 'APPPATH\\Controllers\\Admin\\Turmas.php', 119, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-24 09:50:30 --> Trying to get property 'id' of non-object
+in APPPATH\Views\admin\turmas\transferir-aluno.php on line 110.
+ 1 APPPATH\Views\admin\turmas\transferir-aluno.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id\' of non-object', 'APPPATH\\Views\\admin\\turmas\\transferir-aluno.php', 110, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\transferir-aluno.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/transferir-aluno.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(144): view('admin/turmas/transferir-aluno.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->transferirAluno('1', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

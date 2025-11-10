@@ -1,0 +1,44 @@
+CRITICAL - 2025-05-17 11:57:32 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\disciplinas.php on line 135.
+ 1 APPPATH\Views\admin\turmas\disciplinas.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\disciplinas.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\disciplinas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/disciplinas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(460): view('admin/turmas/disciplinas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->disciplinasTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-17 11:57:51 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\disciplinas.php on line 135.
+ 1 APPPATH\Views\admin\turmas\disciplinas.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\disciplinas.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\disciplinas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/disciplinas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(460): view('admin/turmas/disciplinas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->disciplinasTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-17 11:58:25 --> Undefined property: stdClass::$id_turma_disciplina
+in APPPATH\Views\admin\turmas\disciplinas.php on line 135.
+ 1 APPPATH\Views\admin\turmas\disciplinas.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_turma_disciplina', 'APPPATH\\Views\\admin\\turmas\\disciplinas.php', 135, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\disciplinas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/disciplinas.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(460): view('admin/turmas/disciplinas.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->disciplinasTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-17 12:27:44 --> Undefined property: stdClass::$nome
+in APPPATH\Views\admin\turmas\alunos.php on line 51.
+ 1 APPPATH\Views\admin\turmas\alunos.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\admin\\turmas\\alunos.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(149): view('admin/turmas/alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->alunosTurmas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

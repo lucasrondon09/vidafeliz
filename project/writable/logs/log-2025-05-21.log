@@ -1,0 +1,62 @@
+CRITICAL - 2025-05-21 09:18:36 --> Argument 1 passed to CodeIgniter\Model::__construct() must implement interface CodeIgniter\Database\ConnectionInterface or be null, string given, called in C:\wamp64\www\secretaria-digital\project\app\Views\admin\turmas\lancar-notas-alunos.php on line 97
+in SYSTEMPATH\Model.php on line 149.
+ 1 APPPATH\Views\admin\turmas\lancar-notas-alunos.php(97): CodeIgniter\Model->__construct('29', '1', '7', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas-alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(607): view('admin/turmas/lancar-notas-alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotasAlunos('1', '7')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 09:20:11 --> Argument 1 passed to CodeIgniter\Model::__construct() must implement interface CodeIgniter\Database\ConnectionInterface or be null, string given, called in C:\wamp64\www\secretaria-digital\project\app\Views\admin\turmas\lancar-notas-alunos.php on line 97
+in SYSTEMPATH\Model.php on line 149.
+ 1 APPPATH\Views\admin\turmas\lancar-notas-alunos.php(97): CodeIgniter\Model->__construct('29', '1', '7', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas-alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(607): view('admin/turmas/lancar-notas-alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotasAlunos('1', '7')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 10:11:44 --> Call to undefined method App\Models\Admin\AlunosNotasModel::getNotasByAluno
+in SYSTEMPATH\Model.php on line 811.
+ 1 APPPATH\Views\admin\turmas\lancar-notas-alunos.php(98): CodeIgniter\Model->__call('getNotasByAluno', [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas-alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(609): view('admin/turmas/lancar-notas-alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotasAlunos('1', '7')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 10:20:07 --> Undefined variable: 1
+in APPPATH\Controllers\Admin\Turmas.php on line 659.
+ 1 APPPATH\Controllers\Admin\Turmas.php(659): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: 1', 'APPPATH\\Controllers\\Admin\\Turmas.php', 659, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->salvarNotasAlunos()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 10:22:46 --> Undefined variable: media
+in APPPATH\Views\admin\turmas\lancar-notas-alunos.php on line 101.
+ 1 APPPATH\Views\admin\turmas\lancar-notas-alunos.php(101): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: media', 'APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php', 101, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas-alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(609): view('admin/turmas/lancar-notas-alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotasAlunos('1', '7')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 10:23:15 --> A non-numeric value encountered
+in APPPATH\Views\admin\turmas\lancar-notas-alunos.php on line 102.
+ 1 APPPATH\Views\admin\turmas\lancar-notas-alunos.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php', 102, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\turmas\\lancar-notas-alunos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/turmas/lancar-notas-alunos.php', [], true)
+ 5 APPPATH\Controllers\Admin\Turmas.php(609): view('admin/turmas/lancar-notas-alunos.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Turmas->lancarNotasAlunos('1', '7')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Turmas))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

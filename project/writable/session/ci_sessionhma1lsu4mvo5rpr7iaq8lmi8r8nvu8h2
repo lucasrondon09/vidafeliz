@@ -1,0 +1,13 @@
+__ci_last_regenerate|i:1756901578;_ci_previous_url|s:76:"http://local.secretaria/index.php/Admin/Alunos/historico-escolar/cadastrar/1";userId|s:3:"149";userName|s:13:"Administrador";userLogin|s:5:"admin";userPerfil|s:1:"1";error|s:413:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>O campo Estabelecimento é requerido.</li>
+					<li>O campo Ano é requerido.</li>
+					<li>O campo Turma é requerido.</li>
+					<li>O campo Municipio é requerido.</li>
+					<li>O campo UF é requerido.</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:1:{s:5:"error";s:3:"old";}
