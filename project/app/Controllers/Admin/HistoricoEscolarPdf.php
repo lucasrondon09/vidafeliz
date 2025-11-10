@@ -202,7 +202,7 @@ class HistoricoEscolarPdf extends Controller
             <div class="info-aluno">
                 <strong>Aluno(a):</strong> ' . strtoupper($historico->nome_aluno) . ' 
                 <strong>Data de Nascimento:</strong> ' . $dataNascimento . '<br>
-                <strong>Município/UF:</strong> ' . strtoupper($historico->municipio_nascimento ?? 'CUIABÁ-MT') . ' 
+                <strong>Município/UF:</strong> ' . strtoupper($historico->naturalidade ?? 'CUIABÁ-MT') . ' 
                 <strong>Nacionalidade:</strong> ' . strtoupper($historico->nacionalidade ?? 'BRASILEIRA') . '<br>
                 <strong>Pai:</strong> ' . strtoupper($historico->nome_pai ?? '-') . ' 
                 <strong>Mãe:</strong> ' . strtoupper($historico->nome_mae ?? '-') . '
