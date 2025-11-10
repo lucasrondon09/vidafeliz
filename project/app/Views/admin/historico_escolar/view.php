@@ -22,9 +22,13 @@
   <div class="col-12">
     <a href="<?= base_url('Admin/HistoricoEscolar')?>" class="btn btn-secondary mb-3">
       <i class="fas fa-arrow-left"></i> Voltar
-    </a>
-    <a href="<?= base_url('Admin/HistoricoEscolar/edit/' . $historico->id)?>" class="btn btn-primary mb-3">
+    </a>    <a href="<?= base_url('Admin/HistoricoEscolar/edit/' . $historico->id)?>"
+ class="btn btn-primary mb-3">
       <i class="fas fa-edit"></i> Editar Histórico
+    </a>
+    <a href="<?= base_url('Admin/HistoricoEscolarPdf/gerar/' . $historico->id)?>"
+ class="btn btn-danger mb-3" target="_blank">
+      <i class="fas fa-file-pdf"></i> Gerar PDF
     </a>
   </div>
 </div>

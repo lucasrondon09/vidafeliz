@@ -87,17 +87,23 @@
                   ?>
                   <span class="badge <?= $badge ?>"><?= ucfirst($historico->situacao) ?></span>
                 </td>
-                <td>
-                  <a href="<?= base_url('Admin/HistoricoEscolar/view/' . $historico->id)?>" class="btn btn-sm btn-info" title="Visualizar">
+                <td>                  <a href="<?= base_url('Admin/HistoricoEscolar/view/' . $historico->id)?>"
+ class="btn btn-sm btn-info" title="Visualizar">
                     <i class="fas fa-eye"></i>
                   </a>
-                  <a href="<?= base_url('Admin/HistoricoEscolar/edit/' . $historico->id)?>" class="btn btn-sm btn-primary" title="Editar">
+                  <a href="<?= base_url('Admin/HistoricoEscolarPdf/gerar/' . $historico->id)?>"
+ class="btn btn-sm btn-danger" title="Gerar PDF" target="_blank">
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                  <a href="<?= base_url('Admin/HistoricoEscolar/edit/' . $historico->id)?>"
+ class="btn btn-sm btn-primary" title="Editar">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <a href="<?= base_url('Admin/HistoricoEscolar/delete/' . $historico->id)?>" class="btn btn-sm btn-danger" title="Excluir" onclick="return confirm('Deseja realmente excluir este histórico?')">
+                  <a href="<?= base_url('Admin/HistoricoEscolar/delete/' . $historico->id)?>"
+ class="btn btn-sm btn-danger" title="Excluir"
+ onclick="return confirm('Deseja realmente excluir este histórico?')">
                     <i class="fas fa-trash"></i>
-                  </a>
-                </td>
+                  </a>              </td>
               </tr>
             <?php endforeach; ?>
           <?php else: ?>

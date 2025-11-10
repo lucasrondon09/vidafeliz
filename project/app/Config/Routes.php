@@ -219,6 +219,8 @@ $routes->post('/Admin/HistoricoEscolar/Notas/store/(:num)', 'Admin\HistoricoEsco
 $routes->add('/Admin/HistoricoEscolar/Notas/edit/(:num)', 'Admin\HistoricoEscolarNotas::edit/$1');
 $routes->post('/Admin/HistoricoEscolar/Notas/update/(:num)', 'Admin\HistoricoEscolarNotas::update/$1');
 $routes->add('/Admin/HistoricoEscolar/Notas/delete/(:num)', 'Admin\HistoricoEscolarNotas::delete/$1');
+// Rota de PDF
+$routes->add('/Admin/HistoricoEscolarPdf/gerar/(:num)', 'Admin\HistoricoEscolarPdf::gerar/$1');
 //-------------------------------------------------------------------------
 
 /*

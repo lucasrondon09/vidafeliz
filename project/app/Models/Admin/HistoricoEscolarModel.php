@@ -39,8 +39,9 @@ class HistoricoEscolarModel extends Model
      */
     public function getComAluno($id)
     {
-        return $this->select('historico_escolar.*, alunos.nome as nome_aluno, alunos.matricula')
+        return $this->select('historico_escolar.*, alunos.nome as nome_aluno, alunos.matricula, alunos.data_nascimento, alunos.municipio_nascimento, alunos.nacionalidade, pais.nome as nome_pai, pais.nome_mae')
                     ->join('alunos', 'alunos.id = historico_escolar.id_aluno')
+                    ->join('pais', 'pais.id = alunos.id_pai', 'left')
                     ->where('historico_escolar.id', $id)
                     ->where('historico_escolar.deleted_at', null)
                     ->first();
