@@ -191,6 +191,13 @@ $routes->add('/Admin/Banners/cadastrar', 'Admin\Banners::create');
 $routes->post('/Admin/Banners/upload', 'Admin\Banners::upload');
 $routes->add('/Admin/Banners/editar/(:num)', 'Admin\Banners::edit/$1');
 $routes->add('/Admin/Banners/excluir/(:num)', 'Admin\Banners::delete/$1');
+//-------------------------------------------------------------------------
+$routes->add('/Admin/HistoricoEscolar/Disciplinas', 'Admin\HistoricoEscolarDisciplinas::index');
+$routes->add('/Admin/HistoricoEscolar/Disciplinas/cadastrar', 'Admin\HistoricoEscolarDisciplinas::create');
+$routes->add('/Admin/HistoricoEscolar/Disciplinas/visualizar/(:num)', 'Admin\HistoricoEscolarDisciplinas::read/$1');
+$routes->add('/Admin/HistoricoEscolar/Disciplinas/editar/(:num)', 'Admin\HistoricoEscolarDisciplinas::update/$1');
+$routes->add('/Admin/HistoricoEscolar/Disciplinas/excluir/(:num)', 'Admin\HistoricoEscolarDisciplinas::delete/$1');
+//-------------------------------------------------------------------------
 
 /*
  * --------------------------------------------------------------------
