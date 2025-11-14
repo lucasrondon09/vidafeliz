@@ -95,10 +95,16 @@
     <!-- Cabeçalho com imagem -->
     <header>
         <?php 
-        $caminhoImagem = FCPATH . 'assets/img.png';
-        if (file_exists($caminhoImagem)) {
-            $imagemBase64 = base64_encode(file_get_contents($caminhoImagem));
+        $caminhoHeader = FCPATH . 'assets/admin/dist/img/secretaria-digital-logo.png';
+        $caminhoFooter = FCPATH . 'assets/dist/img/rodape_relatorio.png';
+        if (file_exists($caminhoHeader)) {
+            $imagemBase64 = base64_encode(file_get_contents($caminhoHeader));
             echo '<img src="data:image/png;base64,' . $imagemBase64 . '" alt="Cabeçalho">';
+        }
+        
+        if (file_exists($caminhoFooter)) {
+            $imagemBase64Footer = base64_encode(file_get_contents($caminhoFooter));
+            echo '<img src="data:image/png;base64,' . $caminhoFooter . '" alt="Cabeçalho">';
         }
         ?>
     </header>
@@ -107,8 +113,8 @@
     <footer>
         <?php 
         // Usando a mesma imagem para rodapé, você pode criar uma imagem específica se necessário
-        if (file_exists($caminhoImagem)) {
-            echo '<img src="data:image/png;base64,' . $imagemBase64 . '" alt="Rodapé">';
+        if (file_exists($caminhoFooter)) {
+            echo '<img src="data:image/png;base64,' . $imagemBase64Footer . '" alt="Rodapé">';
         }
         ?>
     </footer>
@@ -124,7 +130,7 @@
         </p>
         
         <p class="texto-atestado">
-            O aluno(a) está apto(a) a cursar o <strong><?= strtoupper($turma_transferencia) ?></strong> da Educação Infantil.
+            O aluno(a) está apto(a) a cursar o <strong><?= strtoupper($turma_transferencia) ?></strong>.
         </p>
         
         <p class="texto-atestado">

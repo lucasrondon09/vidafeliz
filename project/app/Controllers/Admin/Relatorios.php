@@ -46,6 +46,7 @@ class Relatorios extends Controller
     {
 
         $this->data['table'] = 	$this->model->findAll();
+        $this->data['turma_transferencia'] = $this->determinarProximaTurma();
 
         return view('admin/relatorios/index.php', $this->data);
 
@@ -247,38 +248,27 @@ class Relatorios extends Controller
     }
 
     //--------------------------------------------------------------------
-    private function determinarProximaTurma($turmaAtual)
+    private function determinarProximaTurma()
     {
         // Mapeamento de turmas para próxima série
-        $mapeamento = [
-            'BERÇÁRIO' => 'MATERNAL I',
-            'MATERNAL I' => 'MATERNAL II',
-            'MATERNAL II' => 'PRÉ-I',
-            'PRÉ-I' => 'PRÉ-II',
-            'PRÉ-II' => '1º ANO',
-            '1º ANO' => '2º ANO',
-            '2º ANO' => '3º ANO',
-            '3º ANO' => '4º ANO',
-            '4º ANO' => '5º ANO',
-            '5º ANO' => '6º ANO',
-            '6º ANO' => '7º ANO',
-            '7º ANO' => '8º ANO',
-            '8º ANO' => '9º ANO',
-            '9º ANO' => '1ª SÉRIE DO ENSINO MÉDIO',
+        $turmaDestino = [
+            ['nome' => 'MATERNAL I', 'periodo' => 'EDUCAÇÃO INFANTIL'],
+            ['nome' => 'MATERNAL II', 'periodo' => 'EDUCAÇÃO INFANTIL'],
+            ['nome' => 'PRÉ-I', 'periodo' => 'EDUCAÇÃO INFANTIL'],
+            ['nome' => 'PRÉ-II', 'periodo' => 'EDUCAÇÃO INFANTIL'],
+            ['nome' => '1º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '2º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '3º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '4º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '5º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '6º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '7º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '8º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '9º ANO', 'periodo' => 'ENSINO FUNDAMENTAL'],
+            ['nome' => '1ª SÉRIE', 'periodo' => 'ENSINO MÉDIO'],
         ];
     
-        // Usar funções multibyte para preservar acentuação e comparar por prefixo,
-        // assim '1º ANO A' será reconhecido como começando por '1º ANO'.
-        $turmaUpper = mb_strtoupper(trim($turmaAtual));
-    
-        foreach ($mapeamento as $orig => $proxima) {
-            $origUpper = mb_strtoupper($orig);
-            if (mb_substr($turmaUpper, 0, mb_strlen($origUpper)) === $origUpper) {
-                return $proxima;
-            }
-        }
-    
-        return $turmaAtual;
+        return $turmaDestino;
     }
 
 /*

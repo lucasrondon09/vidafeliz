@@ -87,8 +87,10 @@ $session = \Config\Services::session();
               <label for="turma_destino" class="mt-2">Turma de Destino</label>
               <select class="form-control" id="turma_destino" name="turma_destino" required>
                 <option value="">Selecione a turma de destino...</option>
-                <?php foreach ($turmas as $turma): ?>
-                  <option value="<?= htmlspecialchars($turma->nome) ?>"><?= htmlspecialchars($turma->nome) ?></option>
+                <?php foreach ($turma_transferencia as $turma): ?>
+                  <option value="<?= htmlspecialchars($turma['nome'] . ' DO ' . $turma['periodo']) ?>">
+                      <?= htmlspecialchars($turma['nome'] . ' - ' . $turma['periodo']) ?>
+                  </option>
                 <?php endforeach; ?>
               </select>
               <small class="form-text text-muted">
