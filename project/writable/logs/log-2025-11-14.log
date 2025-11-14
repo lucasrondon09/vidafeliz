@@ -1,0 +1,12 @@
+CRITICAL - 2025-11-14 09:50:26 --> Function strftime() is deprecated
+in APPPATH\Views\admin\relatorios\atestado-transferencia.php on line 135.
+ 1 APPPATH\Views\admin\relatorios\atestado-transferencia.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Function strftime() is deprecated', 'APPPATH\\Views\\admin\\relatorios\\atestado-transferencia.php', 135)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\relatorios\\atestado-transferencia.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/relatorios/atestado-transferencia', [], true)
+ 5 APPPATH\Controllers\Admin\Relatorios.php(231): view('admin/relatorios/atestado-transferencia', [...])
+ 6 APPPATH\Controllers\Admin\Relatorios.php(93): App\Controllers\Admin\Relatorios->atestadoTransferencia('1', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\Relatorios->gerarRelatorio()
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Relatorios))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

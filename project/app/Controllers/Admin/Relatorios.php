@@ -228,17 +228,17 @@ class Relatorios extends Controller
         }
 
         $this->data['aluno'] = $aluno;
-        $this->data['turma_atual'] = $aluno->turma ?? '';
+        $this->data['turma_atual'] = $aluno->nome_turma ?? '';
         $this->data['ano_letivo'] = date('Y');
         $this->data['status'] = strtoupper($status);
         
         // Determinar turma de transferência baseado no status
         if ($status === 'cursando') {
             // Se está cursando, transfere para a mesma turma
-            $this->data['turma_transferencia'] = $aluno->turma ?? '';
+            $this->data['turma_transferencia'] = $aluno->nome_turma ?? '';
         } else {
             // Se aprovado, transfere para a próxima turma
-            $this->data['turma_transferencia'] = $this->determinarProximaTurma($aluno->turma ?? '');
+            $this->data['turma_transferencia'] = $this->determinarProximaTurma($aluno->nome_turma ?? '');
         }
 
         // Gerar conteúdo da view
@@ -267,9 +267,19 @@ class Relatorios extends Controller
             '8º ANO' => '9º ANO',
             '9º ANO' => '1ª SÉRIE DO ENSINO MÉDIO',
         ];
-
-        $turmaUpper = strtoupper(trim($turmaAtual));
-        return $mapeamento[$turmaUpper] ?? $turmaAtual;
+    
+        // Usar funções multibyte para preservar acentuação e comparar por prefixo,
+        // assim '1º ANO A' será reconhecido como começando por '1º ANO'.
+        $turmaUpper = mb_strtoupper(trim($turmaAtual));
+    
+        foreach ($mapeamento as $orig => $proxima) {
+            $origUpper = mb_strtoupper($orig);
+            if (mb_substr($turmaUpper, 0, mb_strlen($origUpper)) === $origUpper) {
+                return $proxima;
+            }
+        }
+    
+        return $turmaAtual;
     }
 
 /*
