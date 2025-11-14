@@ -76,16 +76,23 @@ $session = \Config\Services::session();
               <option value="">Selecione o aluno...</option>
             </select>
 
-            <div id="grupoStatus" style="display: none;">
+            <div id="grupoTransferencia" style="display: none;">
               <label for="status" class="mt-2">Status do Aluno</label>
-              <select class="form-control" id="status" name="status">
+              <select class="form-control" id="status" name="status" required>
                 <option value="">Selecione...</option>
                 <option value="cursando">Cursando</option>
                 <option value="aprovado">Aprovado</option>
               </select>
+
+              <label for="turma_destino" class="mt-2">Turma de Destino</label>
+              <select class="form-control" id="turma_destino" name="turma_destino" required>
+                <option value="">Selecione a turma de destino...</option>
+                <?php foreach ($turmas as $turma): ?>
+                  <option value="<?= htmlspecialchars($turma->nome) ?>"><?= htmlspecialchars($turma->nome) ?></option>
+                <?php endforeach; ?>
+              </select>
               <small class="form-text text-muted">
-                <strong>Cursando:</strong> Aluno será transferido para a mesma turma.<br>
-                <strong>Aprovado:</strong> Aluno será transferido para a próxima turma.
+                Selecione a turma para qual o aluno será transferido.
               </small>
             </div>
           </div>
@@ -105,17 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const turmaSelect = document.getElementById('turma');
   const alunoSelect = document.getElementById('aluno');
 
-  const grupoStatus = document.getElementById('grupoStatus');
+  const grupoTransferencia = document.getElementById('grupoTransferencia');
 
   function toggleGrupo() {
     const mostrar = ['declaracao_escolaridade', 'ficha_individual', 'avaliacao_individual', 'atestado_transferencia'].includes(tipoRelatorio.value);
     grupoTurmaAluno.style.display = mostrar ? '' : 'none';
     
-    // Mostrar campo de status apenas para atestado de transferência
+    // Mostrar campos de transferência apenas para atestado de transferência
     if (tipoRelatorio.value === 'atestado_transferencia') {
-      grupoStatus.style.display = '';
+      grupoTransferencia.style.display = '';
     } else {
-      grupoStatus.style.display = 'none';
+      grupoTransferencia.style.display = 'none';
     }
 
     if (!mostrar) {

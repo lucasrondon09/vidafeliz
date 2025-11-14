@@ -215,9 +215,14 @@ class Relatorios extends Controller
 
         // Obter status do aluno (cursando ou aprovado)
         $status = $this->request->getPost('status');
+        $turmaDestino = $this->request->getPost('turma_destino');
         
         if (empty($status)) {
             return redirect()->back()->with('error', 'É necessário selecionar o status do aluno (Cursando ou Aprovado).');
+        }
+
+        if (empty($turmaDestino)) {
+            return redirect()->back()->with('error', 'É necessário selecionar a turma de destino.');
         }
 
         // Buscar dados do aluno e turma
@@ -232,14 +237,8 @@ class Relatorios extends Controller
         $this->data['ano_letivo'] = date('Y');
         $this->data['status'] = strtoupper($status);
         
-        // Determinar turma de transferência baseado no status
-        if ($status === 'cursando') {
-            // Se está cursando, transfere para a mesma turma
-            $this->data['turma_transferencia'] = $aluno->nome_turma ?? '';
-        } else {
-            // Se aprovado, transfere para a próxima turma
-            $this->data['turma_transferencia'] = $this->determinarProximaTurma($aluno->nome_turma ?? '');
-        }
+        // Usar turma de destino selecionada pelo usuário
+        $this->data['turma_transferencia'] = $turmaDestino;
 
         // Gerar conteúdo da view
         $this->conteudo = view('admin/relatorios/atestado-transferencia', $this->data);
