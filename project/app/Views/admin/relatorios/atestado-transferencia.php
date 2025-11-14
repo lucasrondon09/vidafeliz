@@ -120,7 +120,7 @@
         <p class="texto-atestado">
             Atesto para os devidos fins de matrícula que <strong><?= strtoupper($aluno->nome ?? 'NOME DO ALUNO') ?></strong> esteve 
             matriculado(a) neste estabelecimento de ensino no <strong><?= strtoupper($turma_atual) ?></strong> – Ano letivo <strong><?= $ano_letivo ?></strong> considerado(a) 
-            <strong>CURSANDO(A)</strong>.
+            <strong><?= $status === 'CURSANDO' ? 'CURSANDO(A)' : 'APROVADO(A)' ?></strong>.
         </p>
         
         <p class="texto-atestado">
@@ -132,7 +132,13 @@
         </p>
         
         <div class="data-local">
-            Cuiabá, <?= strftime('%d de %B de %Y', strtotime('today')) ?>.
+            Cuiabá, <?php 
+            $meses = ['', 'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+            $dia = date('d');
+            $mes = $meses[(int)date('m')];
+            $ano = date('Y');
+            echo "$dia de $mes de $ano";
+            ?>.
         </div>
         
         <div class="assinatura">
