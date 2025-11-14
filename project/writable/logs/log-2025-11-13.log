@@ -1,0 +1,66 @@
+CRITICAL - 2025-11-13 10:32:22 --> syntax error, unexpected token ";"
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 274.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\HistoricoEscolarPdf', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:54:22 --> Undefined property: stdClass::$SECRETARIA_NOME
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 257.
+ 1 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$SECRETARIA_NOME', 'APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php', 257)
+ 2 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(61): App\Controllers\Admin\HistoricoEscolarPdf->gerarHtmlHistorico(Object(stdClass), [...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\HistoricoEscolarPdf->gerar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HistoricoEscolarPdf))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:55:02 --> Undefined property: stdClass::$SECRETARIA_NOME
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 257.
+ 1 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$SECRETARIA_NOME', 'APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php', 257)
+ 2 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(61): App\Controllers\Admin\HistoricoEscolarPdf->gerarHtmlHistorico(Object(stdClass), [...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\HistoricoEscolarPdf->gerar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HistoricoEscolarPdf))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:56:54 --> Attempt to read property "SECRETARIA_NOME" on array
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 257.
+ 1 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "SECRETARIA_NOME" on array', 'APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php', 257)
+ 2 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(61): App\Controllers\Admin\HistoricoEscolarPdf->gerarHtmlHistorico(Object(stdClass), [...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\HistoricoEscolarPdf->gerar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HistoricoEscolarPdf))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:57:18 --> Undefined property: stdClass::$SECRETARIA_NOME
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 258.
+ 1 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$SECRETARIA_NOME', 'APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php', 258)
+ 2 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(62): App\Controllers\Admin\HistoricoEscolarPdf->gerarHtmlHistorico(Object(stdClass), [...], Object(stdClass))
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\HistoricoEscolarPdf->gerar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HistoricoEscolarPdf))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:58:04 --> Undefined property: stdClass::$SECRETARIA_NOME
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 60.
+ 1 APPPATH\Controllers\Admin\HistoricoEscolarPdf.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$SECRETARIA_NOME', 'APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Admin\HistoricoEscolarPdf->gerar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\HistoricoEscolarPdf))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:58:24 --> syntax error, unexpected integer "6", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\HistoricoEscolarPdf', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-11-13 10:59:11 --> syntax error, unexpected integer "2", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\Admin\HistoricoEscolarPdf.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin\\HistoricoEscolarPdf.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin\\HistoricoEscolarPdf')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Admin\\HistoricoEscolarPdf', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(69): CodeIgniter\CodeIgniter->run()

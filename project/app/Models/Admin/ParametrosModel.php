@@ -26,6 +26,18 @@ class ParametrosModel extends Model
 	{
 		return $this->where('chave', 'MEDIA_ESCOLAR')->first();
 	}
+	
+	public function get($nomeChave){
+		$parametros = $this->findAll();
+		foreach ($parametros as $item) {
+			if (isset($item->chave) && $item->chave === $nomeChave) {
+				return $item->valor;
+			}
+		}
+
+    return null; // caso não encontre
+
+	}
 
 
 	
