@@ -88,7 +88,9 @@ class Relatorios extends Controller
             case 'ficha_individual':
                 return $this->fichaIndividual($idTurma, $idAluno);  
             case 'avaliacao_individual':
-                return $this->avaliacaoIndividual($idTurma, $idAluno);             
+                return $this->avaliacaoIndividual($idTurma, $idAluno);
+            case 'atestado_transferencia':
+                return $this->atestadoTransferencia($idTurma, $idAluno);             
             default:
                 return redirect()->back()->with('error', 'Tipo de relatório inválido.');
         }
@@ -202,6 +204,58 @@ class Relatorios extends Controller
         $this->conteudo = view('admin/relatorios/avaliacao-individual', $this->data);
 
         return $this->gerarPdf('Avaliacao_Individual.pdf', 'I');
+    }
+
+    //--------------------------------------------------------------------
+    public function atestadoTransferencia($idTurma, $idAluno = null)
+    {
+        if (empty($idAluno)) {
+            return redirect()->back()->with('error', 'É necessário selecionar um aluno para gerar o Atestado de Transferência.');
+        }
+
+        // Buscar dados do aluno e turma
+        $aluno = $this->turmaAlunosModel->getAlunoById($idTurma, $idAluno);
+        
+        if (empty($aluno)) {
+            return redirect()->back()->with('error', 'Aluno não encontrado.');
+        }
+
+        $this->data['aluno'] = $aluno;
+        $this->data['turma_atual'] = $aluno->turma ?? '';
+        $this->data['ano_letivo'] = date('Y');
+        
+        // Determinar turma de transferência (próxima série)
+        $this->data['turma_transferencia'] = $this->determinarProximaTurma($aluno->turma ?? '');
+
+        // Gerar conteúdo da view
+        $this->conteudo = view('admin/relatorios/atestado-transferencia', $this->data);
+
+        return $this->gerarPdf('Atestado_Transferencia.pdf', 'I');
+    }
+
+    //--------------------------------------------------------------------
+    private function determinarProximaTurma($turmaAtual)
+    {
+        // Mapeamento de turmas para próxima série
+        $mapeamento = [
+            'BERÇÁRIO' => 'MATERNAL I',
+            'MATERNAL I' => 'MATERNAL II',
+            'MATERNAL II' => 'PRÉ-I',
+            'PRÉ-I' => 'PRÉ-II',
+            'PRÉ-II' => '1º ANO',
+            '1º ANO' => '2º ANO',
+            '2º ANO' => '3º ANO',
+            '3º ANO' => '4º ANO',
+            '4º ANO' => '5º ANO',
+            '5º ANO' => '6º ANO',
+            '6º ANO' => '7º ANO',
+            '7º ANO' => '8º ANO',
+            '8º ANO' => '9º ANO',
+            '9º ANO' => '1ª SÉRIE DO ENSINO MÉDIO',
+        ];
+
+        $turmaUpper = strtoupper(trim($turmaAtual));
+        return $mapeamento[$turmaUpper] ?? $turmaAtual;
     }
 
 /*

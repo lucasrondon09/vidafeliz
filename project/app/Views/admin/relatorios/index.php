@@ -56,6 +56,7 @@ $session = \Config\Services::session();
               <option value="historico_escolar">Histórico Escolar</option>
               <option value="ficha_matricula">Ficha de Matrícula</option>
               <option value="avaliacao_individual">Avaliação Individual</option>
+              <option value="atestado_transferencia">Atestado de Transferência</option>
             </select>
           </div>
 
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const alunoSelect = document.getElementById('aluno');
 
   function toggleGrupo() {
-    const mostrar = ['declaracao_escolaridade', 'ficha_individual', 'avaliacao_individual'].includes(tipoRelatorio.value);
+    const mostrar = ['declaracao_escolaridade', 'ficha_individual', 'avaliacao_individual', 'atestado_transferencia'].includes(tipoRelatorio.value);
     grupoTurmaAluno.style.display = mostrar ? '' : 'none';
 
     if (!mostrar) {
